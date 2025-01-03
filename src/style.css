@@ -360,17 +360,17 @@ nav ul {
 .galery-images {
   height: 50%;
   width: 100%;
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
   position: relative;
+  padding-left: 25%;
 }
 
 .galery-images .container-images {
   display: flex;
   gap: 2rem;
   position: absolute;
-  overflow-y: auto;
   height: 100%;
-  margin-left: 25%;
 }
 
 .galery-images .img {
@@ -579,7 +579,6 @@ nav ul {
 .contact .line {
   width: 20%;
   border: 1px dotted #ccc;
-  margin: auto;
 }
 
 .reserve {
