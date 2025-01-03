@@ -68,6 +68,7 @@ h3 {
 .seccion {
   position: relative;
   width: 100vw;
+  min-height: 100vh;
   overflow: auto;
 }
 
@@ -94,30 +95,29 @@ section {
 /* section */
 
 /* Animaciones de secciones */
-.section-container-0 .section-0 h2 {
-  animation: appear 1s ease;
+.section-container-0 .section-0 {
+  position: fixed;
+  top: 0;
+  min-height: 100vh;
+  z-index: 10;
 }
 
-.section-container-1 .section-1 h2 {
-  animation: appear 1s ease;
+.section-container-1 .section-1 {
+  position: fixed;
+  top: 0;
+  min-height: 100vh;
 }
 
-.section-container-2 .section-2 h2 {
-  animation: appear 1s ease;
+.section-container-2 .section-2 {
+  position: fixed;
+  top: 0;
+  min-height: 100vh;
 }
 
-.section-container-3 .section-3 h2 {
-  animation: appear 1s ease;
-}
-
-@keyframes appear {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
+.section-container-3 .section-3 {
+  position: fixed;
+  top: 0;
+  min-height: 100vh;
 }
 
 .images-bg {
@@ -134,7 +134,7 @@ nav {
   position: fixed;
   display: flex;
   align-items: center;
-  z-index: 10;
+  z-index: 15;
 }
 
 nav .nav-items {
@@ -385,6 +385,7 @@ nav ul {
 .galery .progress-bar {
   display: flex;
   align-items: center;
+  gap: 1rem;
 }
 
 .galery .progress-bar p {

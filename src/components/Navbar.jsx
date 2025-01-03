@@ -1,14 +1,33 @@
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { MyContext } from '../context/context';
+import { motion } from 'framer-motion';
 
 const Navbar = () => {
     const { bullet, setBullet } = useContext(MyContext);
+    const seccionHeight = window.innerHeight;
+
+    useEffect(() => {
+        const scrollBullets = () => {
+            const scrollPosition = window.scrollY;
+            const nuevaSeccion = Math.floor(scrollPosition / seccionHeight);
+
+            if (scrollPosition > seccionHeight ) {
+                setBullet(nuevaSeccion)
+            } else {
+                setBullet(0)
+            }
+        };
+
+        window.addEventListener('scroll', scrollBullets);
+
+        return () => {
+            window.removeEventListener('scroll', scrollBullets);
+        };
+    }, [seccionHeight, bullet]);
 
     const handleBullet = (index) => {
-        console.log(window.scrollY)
         setBullet(index)
     }
-
     return <nav>
         <ul>
             <li><a href=""><svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -25,7 +44,7 @@ const Navbar = () => {
         <div className="nav-items">
             {['Home', 'Espacios', 'Servicios', 'Contacto'].map((seccion, index) => (
                 <button onClick={() => handleBullet(index)} key={index} id={`seccion-${index}`} className={`bullet ${index === bullet && "active"}`} data-tooltip={`${seccion}`}>
-                    {index === bullet }
+                    {index === bullet}
                 </button>
             ))}
         </div>
