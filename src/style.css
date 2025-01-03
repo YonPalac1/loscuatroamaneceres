@@ -15,9 +15,9 @@
 :root {
   font-family: mdserif;
   color: white;
-  text-decoration: none;
   --cursorXPos: -100px;
   --cursorYPos: 60px;
+  
 }
 
 * {
@@ -25,6 +25,7 @@
   padding: 0;
   box-sizing: border-box;
   list-style: none;
+  text-decoration: none;
 }
 
 body {
@@ -181,10 +182,6 @@ nav ul {
 }
 
 @media screen and (max-width: 493px) {
-  nav {
-    align-items: end;
-  }
-
   nav .nav-items {
     padding: 1rem 1rem;
   }
