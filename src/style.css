@@ -73,6 +73,7 @@ h3 {
 section {
   width: 100%;
   min-height: 100vh;
+  max-height: 100vh;
   padding: 2rem 6rem;
   position: relative;
   z-index: 9;
