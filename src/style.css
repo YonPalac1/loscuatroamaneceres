@@ -437,6 +437,16 @@ nav ul {
   .galery h2 {
     font-size: 1.5rem;
   }
+}
+@media screen and (max-width: 493px) {
+  .galery .title {
+    justify-content: start;
+    text-align: left;
+  }
+  
+  .galery .title h2 {
+    line-height: 2rem;
+  }
   .galery-images {
     justify-content: center;
     flex-wrap: wrap;
@@ -446,16 +456,6 @@ nav ul {
   .galery-images .img {
     width: 40%;
   
-  }
-}
-@media screen and (max-width: 493px) {
-  .galery .title {
-  justify-content: start;
-    text-align: left;
-  }
-
-  .galery .title h2 {
-    line-height: 2rem;
   }
 }
 
