@@ -34,9 +34,19 @@ const Home = () => {
 
     return (
         <Container bullet={bullet}>
+            {
+                images?.map((img, i) => (
+                    <img src={img} alt=""
+                        style={{
+                            opacity: i === bullet ? 1 : 0
+                        }}
+                        key={i}
+                        className='images-bg'
+                    ></img>
+                ))
+            }
             {secciones.map((Seccion, index) => (
                 <div key={index} className="seccion" ref={heightRef}>
-                    <img src={images[bullet]} alt="" className='images-bg'></img>
                     {Seccion}
                 </div>
             ))}
@@ -138,7 +148,7 @@ const Seccion3 = ({ bullet }) => {
         <div className='descriptions'>
             {
                 items.map((item, index) => (
-                    <Reveal delay={index}  key={index}>
+                    <Reveal delay={index} key={index}>
                         <div className='item'>
                             <h3 className='active' onClick={() => handleToggle(index)}>{item.title}</h3>
                             <div

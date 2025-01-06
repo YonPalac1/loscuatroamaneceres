@@ -577,6 +577,7 @@ nav ul {
 }
 .form-container form label {
   font-size: 1rem;
+  margin-top: 0.8rem;
 }
 .form-container form button {
   margin-top: 1rem;
