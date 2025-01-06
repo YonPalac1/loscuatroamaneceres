@@ -330,7 +330,7 @@ nav .icon img {
 .events {
   flex-direction: column;
   align-items: center;
-  padding-top: 2rem;
+  padding-top: 4rem;
 }
 .events .grilla {
   border-top: 1px dotted white;
@@ -354,7 +354,7 @@ nav .icon img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-bottom: 1.5rem;
+  padding-bottom: 4rem;
 }
 .galery h2 {
   line-height: 3rem;
@@ -368,7 +368,6 @@ nav .icon img {
   display: flex;
   align-items: center;
   gap: 1rem;
-  overflow: auto;
 }
 
 .galery .progress-bar p {
@@ -450,12 +449,6 @@ nav .icon img {
   
   .galery .title h2 {
     line-height: 2rem;
-  }
-  .galery-images {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 0;
   }
   .galery-images .img {
     width: 40%;
