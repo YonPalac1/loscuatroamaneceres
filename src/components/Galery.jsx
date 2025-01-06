@@ -26,10 +26,10 @@ const Galery = ({ bullet }) => {
         setParalaxPosition({ x: paralaxX, y: paralaxY });
     }, [mousePosition]);
 
-    return <section className="galery section-2"
+    return <section className="galery section-1"
     id="espacios"
         style={{
-            display: bullet === 2 ? "flex" : "none"
+            display: bullet === 1 ? "flex" : "none"
         }}
     >
         <div className="title">

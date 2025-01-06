@@ -24,20 +24,13 @@ const Events = ({ bullet }) => {
         setParalaxPosition({ x: paralaxX, y: paralaxY });
     }, [mousePosition]);
 
-    return <section className="events section-1"
+    return <section className="events section-2"
         id="eventos"
         style={{
-            display: bullet === 1 ? "flex" : "none"
+            display: bullet === 2 ? "flex" : "none"
         }}
     >
         <div className="title">
-            <Reveal delay={1}>
-                <div className="circle"
-                    style={{
-                        transform: `translate(${paralaxPosition.x}px, ${paralaxPosition.y}px)`,
-                        transition: 'transform 0.1s ease-out',
-                    }}></div>
-            </Reveal>
             <Reveal delay={0.5}>
                 <h2>Grilla de eventos</h2>
             </Reveal>
