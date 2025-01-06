@@ -30,7 +30,6 @@ const Home = () => {
     const heightRef = useRef(null);
 
     useEffect(() => {
-        console.log(bullet)
         setHeight(heightRef.current.offsetHeight)
     }, [heightRef, bullet])
 
@@ -80,6 +79,7 @@ const Seccion1 = ({ bullet }) => {
 
 
     return <section className="home section-0"
+        id="home"
         style={{
             display: bullet === 0 ? "flex" : "none"
         }}>
@@ -99,7 +99,7 @@ const Seccion1 = ({ bullet }) => {
             </div>
         </div>
         <Reveal delay={0.5}>
-            <a href=""><h1>Los cuatro amaneceres</h1></a>
+            {/* <a href=""><h1>Los cuatro amaneceres</h1></a> */}
         </Reveal>
 
         <div className="discover">
@@ -136,6 +136,7 @@ const Seccion3 = ({ bullet }) => {
     }
 
     return <section className='services section-3'
+        id="servicios"
         style={{
             display: bullet === 3 ? "flex" : "none"
         }}>
@@ -171,6 +172,7 @@ const Seccion3 = ({ bullet }) => {
 }
 const Seccion4 = ({ bullet }) => {
     return <section className='contact section-4'
+        id="contacto"
         style={{
             display: bullet === 4 ? "flex" : "none"
         }}>

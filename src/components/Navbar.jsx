@@ -1,6 +1,9 @@
 import { useContext, useEffect, useState } from 'react';
 import { MyContext } from '../context/context';
 
+import icon from "../assets/icon.png";
+import { Link } from 'react-router-dom';
+
 const Navbar = () => {
     const { bullet, setBullet } = useContext(MyContext);
     const seccionHeight = window.innerHeight;
@@ -41,12 +44,15 @@ const Navbar = () => {
             </a></li>
         </ul>
         <div className="nav-items">
-            {['Home', 'Events', 'Espacios', 'Servicios', 'Contacto'].map((seccion, index) => (
-                <button onClick={() => handleBullet(index)} key={index} id={`seccion-${index}`} className={`bullet ${index === bullet && "active"}`} data-tooltip={`${seccion}`}>
+            {['home', 'eventos', 'espacios', 'servicios', 'contacto'].map((seccion, index) => (
+                <a href={`#${seccion}`} onClick={() => handleBullet(index)} key={index} id={`seccion-${index}`} className={`bullet ${index === bullet && "active"}`} data-tooltip={`${seccion}`}>
                     {index === bullet}
-                </button>
+                </a>
             ))}
         </div>
+        <Link to="/" className='icon'>
+            <img src={ icon } alt="los cuatro amaneceres" ></img>
+        </Link>
     </nav>
 }
 export default Navbar;

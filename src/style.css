@@ -27,7 +27,9 @@
   list-style: none;
   text-decoration: none;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   padding: 0;
@@ -83,7 +85,7 @@ section {
 
 @media screen and (max-width: 493px) {
   section {
-    padding: 1rem 2rem;
+    padding: 2rem 2rem;
   }
 }
 
@@ -152,7 +154,14 @@ nav ul {
   right: 2rem;
   top: 2rem;
 }
-
+nav .icon {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+nav .icon img {
+  width: 120px;
+}
 @media screen and (max-width: 800px) {
   nav .nav-items .bullet {
     width: 0.5rem;

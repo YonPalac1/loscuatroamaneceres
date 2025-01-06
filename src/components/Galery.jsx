@@ -27,6 +27,7 @@ const Galery = ({ bullet }) => {
     }, [mousePosition]);
 
     return <section className="galery section-2"
+    id="espacios"
         style={{
             display: bullet === 2 ? "flex" : "none"
         }}

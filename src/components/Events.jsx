@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { Reveal } from "./Reveal";
 
+import icon from "../assets/icon.png";
+
 const Events = ({ bullet }) => {
     const [paralaxPosition, setParalaxPosition] = useState({ x: 0, y: 0 });
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -23,6 +25,7 @@ const Events = ({ bullet }) => {
     }, [mousePosition]);
 
     return <section className="events section-1"
+        id="eventos"
         style={{
             display: bullet === 1 ? "flex" : "none"
         }}
