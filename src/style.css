@@ -182,6 +182,7 @@ nav ul {
   position: absolute;
   bottom: 2rem;
   left: 2rem;
+  height: fit-content;
 }
 
 .title h2 {
@@ -432,14 +433,14 @@ nav ul {
     order: 2;
   }
 }
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 388px) {
   .galery h2 {
     font-size: 1.5rem;
   }
   .galery-images {
     justify-content: center;
     flex-wrap: wrap;
-    gap: .5;
+    gap: 1rem;
     margin-bottom: 0;
   }
   .galery-images .img {
