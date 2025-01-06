@@ -15,16 +15,18 @@ import Container from '../components/Container';
 import { Reveal } from '../components/Reveal';
 import Galery from '../components/Galery';
 import Form from '../components/Form';
+import Events from '../components/Events';
 
 const Home = () => {
     const { bullet, setHeight } = useContext(MyContext);
     const secciones = [
         <Seccion1 bullet={bullet} />,
         <Galery bullet={bullet} />,
+        <Events bullet={bullet} />,
         <Seccion3 bullet={bullet} />,
         <Seccion4 bullet={bullet} />,
     ];
-    const [images] = useState([bg1, bg2, bg3, bg4]);
+    const [images] = useState([bg1, bg2, bg1, bg3, bg4]);
     const heightRef = useRef(null);
 
     useEffect(() => {
@@ -133,9 +135,9 @@ const Seccion3 = ({ bullet }) => {
         }
     }
 
-    return <section className='services section-2'
+    return <section className='services section-3'
         style={{
-            display: bullet === 2 ? "flex" : "none"
+            display: bullet === 3 ? "flex" : "none"
         }}>
         <div className='title'>
             <Reveal delay={0.5}>
@@ -168,9 +170,9 @@ const Seccion3 = ({ bullet }) => {
     </section>
 }
 const Seccion4 = ({ bullet }) => {
-    return <section className='contact section-3'
+    return <section className='contact section-4'
         style={{
-            display: bullet === 3 ? "flex" : "none"
+            display: bullet === 4 ? "flex" : "none"
         }}>
         <div className='title'>
             <Reveal delay={0.5}>

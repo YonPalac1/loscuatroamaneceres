@@ -41,7 +41,7 @@ const Navbar = () => {
             </a></li>
         </ul>
         <div className="nav-items">
-            {['Home', 'Espacios', 'Servicios', 'Contacto'].map((seccion, index) => (
+            {['Home', 'Events', 'Espacios', 'Servicios', 'Contacto'].map((seccion, index) => (
                 <button onClick={() => handleBullet(index)} key={index} id={`seccion-${index}`} className={`bullet ${index === bullet && "active"}`} data-tooltip={`${seccion}`}>
                     {index === bullet}
                 </button>
