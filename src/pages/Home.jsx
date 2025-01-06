@@ -1,11 +1,8 @@
 import React, { useState, useEffect, useContext, useRef } from 'react';
-import { motion } from 'motion/react';
+import { useScroll } from 'framer-motion';
+
 import wave from "../assets/wave.png";
 import arrow from "../assets/arrow.png";
-
-import img1 from "../assets/galery/img1.png"
-import img2 from "../assets/galery/img2.png"
-import img3 from "../assets/galery/img3.png"
 
 import bg1 from "../assets/bg-home.png"
 import bg2 from "../assets/bg-section-2.png"
@@ -16,21 +13,29 @@ import bg4 from "../assets/bg-section-2.png"
 import { MyContext } from '../context/context';
 import Container from '../components/Container';
 import { Reveal } from '../components/Reveal';
+import Galery from '../components/Galery';
+import Form from '../components/Form';
 
 const Home = () => {
-    const { bullet } = useContext(MyContext);
+    const { bullet, setHeight } = useContext(MyContext);
     const secciones = [
         <Seccion1 bullet={bullet} />,
-        <Seccion2 bullet={bullet} />,
+        <Galery bullet={bullet} />,
         <Seccion3 bullet={bullet} />,
         <Seccion4 bullet={bullet} />,
     ];
     const [images] = useState([bg1, bg2, bg3, bg4]);
+    const heightRef = useRef(null);
+
+    useEffect(() => {
+        console.log(bullet)
+        setHeight(heightRef.current.offsetHeight)
+    }, [heightRef, bullet])
 
     return (
         <Container bullet={bullet}>
             {secciones.map((Seccion, index) => (
-                <div key={index} className="seccion">
+                <div key={index} className="seccion" ref={heightRef}>
                     <img src={images[bullet]} alt="" className='images-bg'></img>
                     {Seccion}
                 </div>
@@ -85,92 +90,14 @@ const Seccion1 = ({ bullet }) => {
             <a href=""><h1>Los cuatro amaneceres</h1></a>
         </Reveal>
 
-        <Reveal delay={1}>
-            <div className="discover">
+        <div className="discover">
+            <Reveal delay={0.8}>
                 <h3>Descubre nuestro refugio</h3>
-            </div>
-        </Reveal>
+            </Reveal>
+        </div>
     </section >
 }
-const Seccion2 = ({ bullet }) => {
-    const [paralaxPosition, setParalaxPosition] = useState({ x: 0, y: 0 });
-    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
-    useEffect(() => {
-        const handleMouseMove = (event) => {
-            setMousePosition({ x: event.clientX, y: event.clientY });
-        };
-        document.addEventListener('mousemove', handleMouseMove);
-        return () => {
-            document.removeEventListener('mousemove', handleMouseMove);
-        };
-    }, []);
-
-    useEffect(() => {
-        const paralaxSpeed = 0.05; // ajusta la velocidad del paralax
-        const paralaxX = mousePosition.x * paralaxSpeed;
-        const paralaxY = mousePosition.y * paralaxSpeed;
-        setParalaxPosition({ x: paralaxX, y: paralaxY });
-    }, [mousePosition]);
-
-    return <section className="galery section-1"
-        style={{
-            display: bullet === 1 ? "flex" : "none"
-        }}
-    >
-        <div className="title">
-            <Reveal delay={1}>
-                <div className="circle"
-                    style={{
-                        transform: `translate(${paralaxPosition.x}px, ${paralaxPosition.y}px)`,
-                        transition: 'transform 0.1s ease-out',
-                    }}></div>
-            </Reveal>
-            <Reveal delay={0.5}>
-                <h2>Espacios de serenidad</h2>
-            </Reveal>
-        </div>
-
-        <div className='galery-images'>
-            <Reveal delay={1}>
-                <div className='container-images'>
-                    <div className='img'>
-                        <img src={img1} alt=""></img>
-                    </div>
-                    <div className='img'>
-                        <img src={img2} alt=""></img>
-                    </div>
-                    <div className='img'>
-                        <img src={img3} alt=""></img>
-                    </div>
-                    <div className='img'>
-                        <img src={img3} alt=""></img>
-                    </div>
-                    <div className='img'>
-                        <img src={img3} alt=""></img>
-                    </div>
-                    <div className='img'>
-                        <img src={img3} alt=""></img>
-                    </div>
-                    <div className='img'>
-                        <img src={img3} alt=""></img>
-                    </div>
-                    <div className='img'>
-                        <img src={img3} alt=""></img>
-                    </div>
-                </div>
-            </Reveal>
-        </div>
-        <div className="progress-bar">
-            <Reveal delay={0.5}>
-                <p>Nuestras habitaciones están diseñadas para que te sientas en casa, con todo lo necesario para una estancia relajante.</p>
-            </Reveal>
-            <div className='progress'>
-                <div className='dot'></div>
-            </div>
-        </div>
-    </section>
-}
 const Seccion3 = ({ bullet }) => {
     const contentEl = useRef();
     const [active, setActive] = useState(null);
@@ -211,8 +138,8 @@ const Seccion3 = ({ bullet }) => {
         <div className='descriptions'>
             {
                 items.map((item, index) => (
-                    <Reveal delay={index}>
-                        <div className='item' key={index}>
+                    <Reveal delay={index}  key={index}>
+                        <div className='item'>
                             <h3 className='active' onClick={() => handleToggle(index)}>{item.title}</h3>
                             <div
                                 className={`collapse ${active === index ? "show" : ""}`}
@@ -271,6 +198,8 @@ const Seccion4 = ({ bullet }) => {
             <span>Reserva</span>
             <img src={arrow} alt=""></img>
         </div>
+
+        <Form />
     </section>
 }
 

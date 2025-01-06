@@ -75,10 +75,10 @@ h3 {
 section {
   width: 100%;
   min-height: 100vh;
-  max-height: 100vh;
   padding: 2rem 6rem;
-  position: relative;
   z-index: 9;
+  position: fixed;
+  top: 0;
 }
 
 @media screen and (max-width: 493px) {
@@ -95,30 +95,9 @@ section {
 /* section */
 
 /* Animaciones de secciones */
-.section-container-0 .section-0 {
-  position: fixed;
-  top: 0;
-  min-height: 100vh;
-  z-index: 10;
-}
-
-.section-container-1 .section-1 {
-  position: fixed;
-  top: 0;
-  min-height: 100vh;
-}
-
-.section-container-2 .section-2 {
-  position: fixed;
-  top: 0;
-  min-height: 100vh;
-}
-
 .section-container-3 .section-3 {
-  position: fixed;
-  top: 0;
-  min-height: 100vh;
-}
+  position: absolute;
+} 
 
 .images-bg {
   width: 100%;
@@ -241,7 +220,6 @@ nav ul {
   border: 1px dotted #ccc;
   width: 150px;
   height: 150px;
-  transition: .5s;
 }
 
 .home .discover:hover {
@@ -349,37 +327,11 @@ nav ul {
 }
 
 .galery h2 {
-  width: 30%;
   line-height: 3rem;
 }
 
 .galery .title {
   height: 25%;
-}
-
-.galery-images {
-  height: 50%;
-  width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-  position: relative;
-  padding-left: 25%;
-}
-
-.galery-images .container-images {
-  display: flex;
-  gap: 2rem;
-  position: absolute;
-  height: 100%;
-}
-
-.galery-images .img {
-  height: 100%;
-}
-
-.galery-images img {
-  height: 100%;
-  width: inherit;
 }
 
 .galery .progress-bar {
@@ -408,6 +360,15 @@ nav ul {
   background-color: white;
 }
 
+.galery-images {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  gap: 1rem;
+}
+.galery-images .img img {
+  width: 100%;
+}
 @media screen and (max-width: 972px) {
   .galery h2 {
     width: 100%;
@@ -426,26 +387,31 @@ nav ul {
     width: 100%;
     font-size: 1rem;
     order: 2;
-    margin-top: 1rem;
   }
 }
 @media screen and (max-width: 380px) {
   .galery h2 {
     font-size: 1.5rem;
   }
+  .galery-images {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: .5;
+    margin-bottom: 0;
+  }
+  .galery-images .img {
+    width: 40%;
+  
+  }
 }
 @media screen and (max-width: 493px) {
   .galery .title {
-    justify-content: start;
+  justify-content: start;
     text-align: left;
   }
 
   .galery .title h2 {
     line-height: 2rem;
-  }
-
-  .container-images {
-    margin-left: 100%;
   }
 }
 
@@ -524,7 +490,7 @@ nav ul {
     font-size: 1.5rem;
   }
   .services h3 {
-    font-size: 1rem;
+    font-size: 1.3rem;
     line-height: 1rem;
   }
 }
@@ -539,7 +505,7 @@ nav ul {
   }
 
   .services .descriptions .item .collapse p {
-    font-size: 0.5rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -592,6 +558,29 @@ nav ul {
   border-radius: 50%;
   width: 200px;
   height: 200px;
+}
+.form-container {
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+}
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+.form-container form textarea,
+.form-container form input {
+  border: 1px solid #ccc;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: white;
+  padding: 8px 12px;
+}
+.form-container form label {
+  font-size: 1rem;
+}
+.form-container form button {
+  margin-top: 1rem;
+  padding: 8px 12px;
 }
 
 @media screen and (max-width: 844px) {
