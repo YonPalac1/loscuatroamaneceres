@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Reveal } from "./Reveal";
-import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
 

@@ -362,9 +362,25 @@ nav ul {
 
 .galery-images {
   display: flex;
-  justify-content: space-around;
+  justify-content: end;
+
   position: relative;
-  gap: 1rem;
+  gap: 2rem;
+}
+.galery-images .img {
+  position: relative;
+  cursor: pointer;
+}
+.galery-images .img:hover:before {
+  content: "+";
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: .5s;
 }
 .galery-images .img img {
   width: 100%;
