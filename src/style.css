@@ -93,7 +93,6 @@ section {
   width: 100%;
   transition: 1s ease-in-out;
 }
-
 /* section */
 
 /* Animaciones de secciones */
@@ -107,6 +106,7 @@ section {
   position: fixed;
   /* opacity: 0; */
   transition: 1s ease;
+  object-fit: cover;
 }
 
 /* nav */
@@ -220,7 +220,7 @@ nav .icon img {
 
 .home .discover {
   position: absolute;
-  margin-bottom: 1rem;
+  bottom: 1rem;
   right: 2rem;
   display: flex;
   justify-content: center;
@@ -640,4 +640,5 @@ nav .icon img {
   }
 }
 
-/* reserve */
+
+/* videos */

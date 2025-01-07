@@ -9,6 +9,9 @@ import bg2 from "../assets/bg-section-2.png"
 import bg3 from "../assets/bg-section-3.png"
 import bg4 from "../assets/bg-section-2.png"
 
+import video1 from "../assets/video1.mp4"
+import video2 from "../assets/video2.mp4"
+import video3 from "../assets/video3.mp4"
 
 import { MyContext } from '../context/context';
 import Container from '../components/Container';
@@ -26,7 +29,7 @@ const Home = () => {
         <Seccion3 bullet={bullet} />,
         <Seccion4 bullet={bullet} />,
     ];
-    const [images] = useState([bg1, bg2, bg1, bg3, bg4]);
+    const [images] = useState([video1, video2, video3, video1, video2]);
     const heightRef = useRef(null);
 
     useEffect(() => {
@@ -37,21 +40,25 @@ const Home = () => {
         <Container bullet={bullet}>
             {
                 images?.map((img, i) => (
-                    <img src={img} alt=""
+                    <video autoPlay loop muted
                         style={{
                             opacity: i === bullet ? 1 : 0
                         }}
-                        key={i}
                         className='images-bg'
-                    ></img>
+                    >
+                        <source src={ img } type="video/mp4"></source>
+                    </video>
+                ))
+
+            }
+            {
+                secciones.map((Seccion, index) => (
+                    <div key={index} className="seccion" ref={heightRef}>
+                        {Seccion}
+                    </div>
                 ))
             }
-            {secciones.map((Seccion, index) => (
-                <div key={index} className="seccion" ref={heightRef}>
-                    {Seccion}
-                </div>
-            ))}
-        </Container>
+        </Container >
     );
 };
 
