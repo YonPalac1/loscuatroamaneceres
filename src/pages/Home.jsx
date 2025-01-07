@@ -91,7 +91,7 @@ const Seccion1 = ({ bullet }) => {
             display: bullet === 0 ? "flex" : "none"
         }}>
         <div className="title">
-            <Reveal delay={1}>
+            <Reveal delay={1.5}>
                 <div className="circle"
                     style={{
                         transform: `translate(${paralaxPosition.x}px, ${paralaxPosition.y}px)`,
@@ -99,18 +99,16 @@ const Seccion1 = ({ bullet }) => {
                     }}></div>
             </Reveal>
             <div className='text-wave'>
-                <Reveal delay={0.5}>
+                <Reveal delay={1}>
                     <h2>Un refugio de paz y tranquilidad</h2>
                 </Reveal>
                 <img src={wave} alt=""></img>
             </div>
         </div>
-        <Reveal delay={0.5}>
             {/* <a href=""><h1>Los cuatro amaneceres</h1></a> */}
-        </Reveal>
 
         <div className="discover">
-            <Reveal delay={0.8}>
+            <Reveal delay={1.5}>
                 <h3>Descubre nuestro refugio</h3>
             </Reveal>
         </div>

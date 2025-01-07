@@ -616,6 +616,9 @@ nav .icon img {
   color: white;
   padding: 8px 12px;
 }
+.form-container form input:focus {
+  border: none;
+}
 .form-container form label {
   font-size: 1rem;
   margin-top: 0.8rem;
@@ -623,8 +626,11 @@ nav .icon img {
 .form-container form button {
   margin-top: 1rem;
   padding: 8px 12px;
+  cursor: pointer;
 }
-
+.form-container form button:hover {
+  background-color: rgb(235, 228, 167);
+}
 @media screen and (max-width: 844px) {
   .contact .info {
     flex-direction: column;
