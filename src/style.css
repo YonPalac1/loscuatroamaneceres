@@ -149,14 +149,15 @@ nav .nav-items .bullet.active {
 
 nav .contact-button {
   position: fixed;
-  right: 2rem;
+  right: 3rem;
   top: 2rem;
   border: 1px dotted white;
   background: none;
   color: white;
-  padding: 8px 12px;
+  padding: 12px 15px;
   cursor: pointer;
   transition: 0.5s;
+  font-size: 1.2rem;
 }
 nav .contact-button:hover {
   color: black;
@@ -218,8 +219,8 @@ nav .icon img {
 }
 .home .subtitle {
   position: absolute;
-  bottom: 3rem;
-  left: 2rem;
+  bottom: 4rem;
+  left: 3rem;
   width: 50%;
 }
 .home .subtitle p {
@@ -489,6 +490,7 @@ nav .icon img {
   gap: 2rem;
   padding-bottom: 4rem;
   padding-top: 4rem;
+  justify-content: center;
 }
 .rooms .title {
   display: flex;
@@ -496,8 +498,10 @@ nav .icon img {
 }
 .rooms .title p {
   font-size: 1rem;
-  margin-top: 1rem;
   text-align: center;
+  width: 70%;
+  margin: auto;
+  margin-top: 2rem;
 }
 .rooms .filters {
   display: flex;
@@ -507,7 +511,7 @@ nav .icon img {
 .rooms .button-filter {
   background: none;
   border: 1px dotted white;
-  padding: 8px 12px;
+  padding: 12px;
   color: white;
   width: 100%;
   cursor: pointer;
@@ -523,6 +527,8 @@ nav .icon img {
 @media screen and (max-width: 493px) {
   .rooms .title p {
     font-size: 0.8rem;
+    width: 100%;
+    margin-top: 1rem;
   }
   .rooms .filters {
     margin-top: 1rem;
@@ -639,14 +645,13 @@ nav .icon img {
   gap: 1rem;
   background-color: rgba(0, 0, 0, 0.5);
 }
-.contact .info {
-  padding: 2rem 4rem;
-}
 .contact .info p {
   font-size: 1rem;
 }
 .contact .info-container > div {
   width: 50%;
+  position: relative;
+  padding: 2rem;
 }
 .contact .info ul {
   margin-top: 2rem;
@@ -658,6 +663,10 @@ nav .icon img {
 .contact .info ul li span {
   font-weight: bold;
   margin-right: 1rem;
+}
+.contact .info .map {
+  display: flex;
+  flex-direction: column;
 }
 .form-container {
   padding-bottom: 1rem;
