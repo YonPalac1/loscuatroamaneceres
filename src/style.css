@@ -392,6 +392,7 @@ nav .icon img {
   display: flex;
   flex-direction: column;
   justify-content: end;
+  padding-bottom: 2rem;
 }
 .galery h2 {
   line-height: 3rem;
@@ -475,6 +476,9 @@ nav .icon img {
   .galery .title h2 {
     line-height: 2rem;
     left: 0;
+  }
+  .galery .swip-container {
+    height: 50%;
   }
 }
 /* Rooms */
