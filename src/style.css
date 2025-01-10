@@ -356,7 +356,7 @@ nav .icon img {
   }
   .home .subtitle {
     position: absolute;
-    bottom: 4rem;
+    margin-bottom: 3rem;
     left: 1rem;
     width: 50%;
   }
@@ -391,8 +391,7 @@ nav .icon img {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding-bottom: 4rem;
+  justify-content: end;
 }
 .galery h2 {
   line-height: 3rem;
@@ -407,6 +406,7 @@ nav .icon img {
   display: flex;
   align-items: center;
   gap: 1rem;
+  margin-top: 2rem;
 }
 
 .galery .progress-bar p {
@@ -436,6 +436,9 @@ nav .icon img {
 .galery .img-slider {
   width: 100%;
   height: 100%;
+}
+.galery .swip-container {
+  height: 60%;
 }
 @media screen and (max-width: 972px) {
   .galery h2 {
@@ -654,8 +657,6 @@ nav .icon img {
 }
 .form-container {
   padding-bottom: 1rem;
-  padding: 2rem 4rem;
-  border-left: 1px dotted white;
 }
 .form-container form {
   display: flex;

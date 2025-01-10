@@ -37,6 +37,7 @@ const Galery = ({ bullet }) => {
         }}
     >
         <Swiper
+        className="swip-container"
             autoplay
             spaceBetween={0}
             pagination={{ clickable: true }}
