@@ -1,9 +1,13 @@
 import { useState, useEffect } from "react";
 import { Reveal } from "./Reveal";
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-import img1 from "../assets/galery/img1.png"
-import img2 from "../assets/galery/img2.png"
-import img3 from "../assets/galery/img3.png"
+import "swiper/css";
+import "swiper/css/autoplay";
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+
+import { GALERY } from "../../contants";
 
 const Galery = ({ bullet }) => {
     const [paralaxPosition, setParalaxPosition] = useState({ x: 0, y: 0 });
@@ -27,7 +31,7 @@ const Galery = ({ bullet }) => {
     }, [mousePosition]);
 
     return <section className="galery section-1"
-    id="espacios"
+        id="espacios"
         style={{
             display: bullet === 1 ? "flex" : "none"
         }}
@@ -45,20 +49,50 @@ const Galery = ({ bullet }) => {
             </Reveal>
         </div>
 
-        <div className="galery-images">
-                <div className='img'>
-                    <img src={img1} alt=""></img>
-                </div>
-                <div className='img'>
-                    <img src={img2} alt=""></img>
-                </div>
-                <div className='img'>
-                    <img src={img3} alt=""></img>
-                </div>
-        </div>
+        <Swiper
+            autoplay
+            spaceBetween={0}
+            pagination={{ clickable: true }}
+            slidesPerView={4}
+            breakpoints={{
+                300: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                },
+
+                382: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                },
+                400: {
+                    slidesPerView: 2,
+                    spaceBetween: 15,
+                },
+                640: {
+                    slidesPerView: 3,
+                    spaceBetween: 10,
+                },
+                768: {
+                    slidesPerView: 4,
+                    spaceBetween: 40,
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 50,
+                },
+            }}
+        >
+            {
+                GALERY.map((img, i) => (
+                    <SwiperSlide key={i}>
+                        <img className="img-slider" src={img}></img>
+                    </SwiperSlide>
+                ))
+            }
+            </Swiper>
         <div className="progress-bar">
             <Reveal delay={0.5}>
-                <p>Nuestras habitaciones están diseñadas para que te sientas en casa, con todo lo necesario para una estancia relajante.</p>
+                <p>Contamos con habitaciones. 3 salones 70m2, 120m2 y 260m2 y espacios verdes para actividades. Además disponemos de un bosque de 8 hectareas, comedor y servicio de gastronomia de cocina natural.</p>
             </Reveal>
             <div className='progress'>
                 <div className='dot'></div>

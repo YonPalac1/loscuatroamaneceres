@@ -24,10 +24,10 @@ const Events = ({ bullet }) => {
         setParalaxPosition({ x: paralaxX, y: paralaxY });
     }, [mousePosition]);
 
-    return <section className="events section-2"
+    return <section className="events section-4"
         id="eventos"
         style={{
-            display: bullet === 2 ? "flex" : "none"
+            display: bullet === 4 ? "flex" : "none"
         }}
     >
         <div className="title">

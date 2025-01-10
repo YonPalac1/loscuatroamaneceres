@@ -96,7 +96,7 @@ section {
 /* section */
 
 /* Animaciones de secciones */
-.section-container-4 .section-4 {
+.section-container-5 .section-5 {
   position: absolute;
 } 
 
@@ -147,12 +147,20 @@ nav .nav-items .bullet.active {
 
 }
 
-nav ul {
-  display: flex;
-  gap: 20px;
+nav .contact-button {
   position: fixed;
   right: 2rem;
   top: 2rem;
+  border: 1px dotted white;
+  background: none;
+  color: white;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+nav .contact-button:hover {
+  color: black;
+  background: white;
 }
 nav .icon {
   position: absolute;
@@ -194,17 +202,30 @@ nav .icon img {
   height: fit-content;
 }
 
-.title h2 {
+.title .text-wave {
   position: relative;
   margin-left: -100px;
+  text-align: center;
 }
-
 .title {
   position: relative;
   display: flex;
   align-items: center;
 }
-
+.home .text-wave p {
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+.home .subtitle {
+  position: absolute;
+  bottom: 3rem;
+  left: 2rem;
+  width: 50%;
+}
+.home .subtitle p {
+  font-size: 1rem;
+  font-weight: lighter;
+}
 .title img {
   width: fit-content;
 }
@@ -230,6 +251,7 @@ nav .icon img {
   border: 1px dotted #ccc;
   width: 150px;
   height: 150px;
+  transition: .5s;
 }
 
 .home .discover:hover {
@@ -300,7 +322,14 @@ nav .icon img {
   .title {
     justify-content: center;
   }
-
+  .title .text-wave p {
+    font-size: 0.8rem;
+  }
+  .title .text-wave {
+    position: relative;
+    margin-left: 0;
+    text-align: center;
+  }
   .text-wave img,
   .title h2 {
     margin-left: 0;
@@ -324,6 +353,15 @@ nav .icon img {
   .home .discover {
     bottom: 1rem;
     right: 1rem;
+  }
+  .home .subtitle {
+    position: absolute;
+    bottom: 3rem;
+    left: 1rem;
+    width: 50%;
+  }
+  .home .subtitle p {
+    font-size: 0.8rem;
   }
 }
 /* section 1 */
@@ -358,6 +396,7 @@ nav .icon img {
 }
 .galery h2 {
   line-height: 3rem;
+  left: -100px;
 }
 
 .galery .title {
@@ -371,7 +410,7 @@ nav .icon img {
 }
 
 .galery .progress-bar p {
-  width: 50%;
+  width: 100%;
   font-size: 1rem;
 }
 
@@ -381,6 +420,7 @@ nav .icon img {
   display: flex;
   align-items: center;
   background-color: #ccc;
+  position: relative;
 }
 
 .galery .progress .dot {
@@ -388,33 +428,16 @@ nav .icon img {
   width: 10px;
   border-radius: 100%;
   background-color: white;
-}
-
-.galery-images {
-  display: flex;
-  justify-content: end;
-
-  position: relative;
-  gap: 2rem;
-}
-.galery-images .img {
-  position: relative;
-  cursor: pointer;
-}
-.galery-images .img:hover:before {
-  content: "+";
+  
   position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  transform: translateX(1rem);
+}
+.galery .swiper-wrapper {
+  width: 90vw;
+} 
+.galery .img-slider {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  transition: .5s;
-  border-radius: 35%;
-}
-.galery-images .img img {
-  width: 100%;
 }
 @media screen and (max-width: 972px) {
   .galery h2 {
@@ -432,7 +455,7 @@ nav .icon img {
 
   .galery .progress-bar p {
     width: 100%;
-    font-size: 1rem;
+    font-size: 0.8rem;
     order: 2;
   }
 }
@@ -449,10 +472,7 @@ nav .icon img {
   
   .galery .title h2 {
     line-height: 2rem;
-  }
-  .galery-images .img {
-    width: 40%;
-  
+    left: 0;
   }
 }
 
@@ -556,7 +576,7 @@ nav .icon img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 0;
+  padding-bottom: 4rem;
 }
 
 .contact .info {
@@ -603,6 +623,8 @@ nav .icon img {
 .form-container {
   margin-top: 2rem;
   padding-bottom: 1rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem 4rem;
 }
 .form-container form {
   display: flex;
@@ -611,10 +633,12 @@ nav .icon img {
 }
 .form-container form textarea,
 .form-container form input {
-  border: 1px solid #ccc;
-  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-bottom: 1px dotted #ccc;
+  background-color: transparent;
   color: white;
   padding: 8px 12px;
+
 }
 .form-container form input:focus {
   border: none;
@@ -648,3 +672,4 @@ nav .icon img {
 
 
 /* videos */
+
