@@ -653,18 +653,15 @@ nav .icon img {
   position: relative;
   padding: 2rem;
 }
-.contact .info ul {
-  margin-top: 2rem;
-}
-.contact .info ul li {
+.contact .map ul li {
   font-size: 1rem;
   margin-top: 1rem;
 }
-.contact .info ul li span {
+.contact .map ul li span {
   font-weight: bold;
   margin-right: 1rem;
 }
-.contact .info .map {
+.contact .map {
   display: flex;
   flex-direction: column;
 }
