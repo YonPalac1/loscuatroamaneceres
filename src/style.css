@@ -356,7 +356,7 @@ nav .icon img {
   }
   .home .subtitle {
     position: absolute;
-    bottom: 3rem;
+    bottom: 4rem;
     left: 1rem;
     width: 50%;
   }
@@ -466,6 +466,7 @@ nav .icon img {
   .galery .title {
     justify-content: start;
     text-align: left;
+    margin-top: 3rem;
   }
   
   .galery .title h2 {
@@ -478,8 +479,9 @@ nav .icon img {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 2rem;
   padding-bottom: 4rem;
+  padding-top: 4rem;
 }
 .rooms .title {
   display: flex;
@@ -494,7 +496,6 @@ nav .icon img {
   display: flex;
   justify-content: space-around;
   width: 100%;
-  margin-top: 2rem;
 }
 .rooms .button-filter {
   background: none;
@@ -509,7 +510,6 @@ nav .icon img {
   color: black;
 }
 .rooms .container-photos {
-  margin-top: 1rem;
   display: flex;
   min-height: 33.5%;
 }

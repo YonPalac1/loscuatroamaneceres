@@ -36,19 +36,6 @@ const Galery = ({ bullet }) => {
             display: bullet === 1 ? "flex" : "none"
         }}
     >
-        <div className="title">
-            <Reveal delay={1}>
-                <div className="circle"
-                    style={{
-                        transform: `translate(${paralaxPosition.x}px, ${paralaxPosition.y}px)`,
-                        transition: 'transform 0.1s ease-out',
-                    }}></div>
-            </Reveal>
-            <Reveal delay={0.5}>
-                <h2>Espacios de serenidad</h2>
-            </Reveal>
-        </div>
-
         <Swiper
             autoplay
             spaceBetween={0}
