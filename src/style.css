@@ -351,12 +351,12 @@ nav .icon img {
   }
 
   .home .discover {
-    bottom: 3rem;
+    margin-bottom: 1rem;
     right: 1rem;
   }
   .home .subtitle {
     position: absolute;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     left: 1rem;
     width: 50%;
   }
