@@ -11,42 +11,24 @@ const Contact = ({ bullet }) => {
         }}>
         <div className='title'>
             <Reveal delay={0.5}>
-                <h2>Los cuatro amaneceres</h2>
+                <h2>¡Contactanos!</h2>
             </Reveal>
         </div>
-        <Reveal delay={0.8}>
-            <div className='info'>
-                <div>
-                    <h3>Explora y descubre</h3>
-                </div>
-                <div className='description'>
-                    <p>Los Cuatro Amaneceres es un complejo de 27 hectáreas rodeadas de bosque  ubicado en el tradicional pueblo Tomás Jofré, Partido de Mercedes,  Buenos Aires. A tan solo 94Km de CABA. Es un lugar para descansar y  conectar con la naturaleza.</p>
-                </div>
-
-            </div>
-        </Reveal>
         <div className='line'></div>
-        <Reveal delay={1}>
-            <div className='info'>
-                <div>
-                    <h3>Datos de contacto</h3>
-                </div>
-                <div className='description'>
+        <div className='info-container'>
+            <Reveal delay={0.5}>
+                <div className='info'>
+                    <p>Por consultas y/o pedidos de cotización contactanos y nuestro equipo de Reservas estarán a su disposición para brindarle información.
+                    </p>
                     <ul>
-                        <li>Dirección: RP N° 42,6600 Mercedes, Tomas Jofré, Bs. As.</li>
-                        <li>Teléfono: 114973 4305</li>
-                        <li>WhatsApp: 115959-7773</li>
-                        <li>E-mail: info@loscuatroamaneceres.com.ar</li>
+                        <li><span>Email:</span> Info@loscuatroamaneceres.com.ar</li>
+                        <li><span>WhatsApp:</span> 115959-7773</li>
+                        <li><span>Teléfono:</span> 114973-4305</li>
                     </ul>
                 </div>
-            </div>
-        </Reveal>
-        <div className='reserve'>
-            <span>Reserva</span>
-            <img src={arrow} alt=""></img>
+            </Reveal>
+            <Form />
         </div>
-
-        <Form />
     </section>
 }
 

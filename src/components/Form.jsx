@@ -21,7 +21,6 @@ const Form = () => {
     };
 
     return <div className="form-container">
-        <h2>¡Contactanos!</h2>
         <form onSubmit={handleSubmit}>
             <label type="text" value={name} onChange={(e) => setName(e.target.value)} id="name">Nombre</label>
             <input placeholder="Nombre" name="name"></input>
