@@ -36,6 +36,6 @@ export const ITEMS = [{
         description: "Sector Campo: 10 Habitaciones cuádruples. Sector Bosque: 8 Habitaciones triples. Sector Piscina: 5 habitaciones cuádruples. Sector Spa: 5 Habitaciones triples/cuádruples. (Todas con baños privados, aire acondicionado y calefacción)."
 }]
 export const GALERY = [img1, img2,img3,img4,img5,img6,img7,img8,img9]
-export const AMANECER = [am1, am2, am3, am4]
+export const AMANECER = [am4, am3, am1]
 export const ATARDECER = [at1]
-export const BOSQUES = [bo1, bo2, bo3, bo4, bo5, bo6]
+export const BOSQUES = [bo1, bo2, bo3, bo5, bo6]
