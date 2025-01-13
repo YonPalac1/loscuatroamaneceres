@@ -63,7 +63,6 @@ const Home = () => {
             {
                 imageActive && <ImageViewer image={imageView} setImageActive={setImageActive} />
             }
-
         </Container >
     );
 };

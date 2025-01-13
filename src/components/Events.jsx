@@ -39,7 +39,7 @@ const Events = ({ bullet }) => {
     >
         <div className="title">
             <Reveal delay={0.5}>
-                <h2>Grilla de eventos</h2>
+                <h2>Eventos</h2>
             </Reveal>
         </div>
         <div className="line"></div>

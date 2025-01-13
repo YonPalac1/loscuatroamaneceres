@@ -687,12 +687,14 @@ nav .icon img {
 }
 
 /* contact */
+section.contact {
+  padding: 2rem 6rem 0;
+}
 .contact {
   gap: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 4rem;
 }
 .contact .line {
   width: 20%;
@@ -828,4 +830,60 @@ nav .icon img {
   color: white;
   font-size: 1.5rem;
   z-index: 220;
+}
+
+/* footer */
+footer {
+  background: rgb(36, 36, 36);
+  width: 100vw;
+  position: relative;
+  z-index: 14;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 2rem;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+}
+footer .social {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+footer .info {
+  text-align: justify;
+  width: 40%;
+
+}
+footer .info p {
+  font-size: 0.8rem;
+}
+footer .info span,
+footer .social span {
+  text-decoration: underline;
+  margin-bottom: 1rem;
+}
+footer img {
+  max-width: 320px;
+}
+@media screen and (max-width: 592px) {
+  footer {
+    flex-direction: column;
+  }
+  footer .info  {
+    width: 100%;
+  }
+  footer .social {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    width: 100%;
+    padding: 0 2rem;
+  }
+  footer img {
+    order: 5;
+  }
 }

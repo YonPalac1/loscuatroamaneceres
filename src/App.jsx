@@ -4,6 +4,7 @@ import Error404 from "./pages/Error404";
 import Navbar from "./components/Navbar";
 import { SectionsProvider } from "./context/context";
 
+
 const App = () => {
     return <SectionsProvider>
         <BrowserRouter>
