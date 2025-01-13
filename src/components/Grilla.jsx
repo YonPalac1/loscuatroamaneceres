@@ -2,12 +2,7 @@ import { useEffect, useState } from "react";
 
 const Grilla = ({ eventos, mesBuscado, calendar }) => {
     const [events, setEvents] = useState(eventos)
-    useEffect(() => {
-        const mesesFiltrados = calendar.filter((evento) => {
-            return evento.mes.toLocaleLowerCase().includes(mesBuscado)
-        })
-        setEvents(mesesFiltrados)
-    }, [eventos, mesBuscado])
+    
 
     return <div className="grilla">
         {
