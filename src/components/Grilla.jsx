@@ -7,7 +7,6 @@ const Grilla = ({ eventos, mesBuscado, calendar }) => {
             return evento.mes.toLocaleLowerCase().includes(mesBuscado)
         })
         setEvents(mesesFiltrados)
-        console.log(events)
     }, [eventos, mesBuscado])
 
     return <div className="grilla">

@@ -441,6 +441,11 @@ nav .icon img {
   border: none;
   padding: 4px 8px;
 }
+@media screen and (max-width: 493px) {
+  .events .filters {
+    gap: 0.8rem;
+  }
+}
 /* section-2 */
 .galery {
   height: 100vh;
