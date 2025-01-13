@@ -371,22 +371,75 @@ nav .icon img {
   align-items: center;
   padding-top: 4rem;
 }
+.events .line {
+  border: 1px dotted white;
+  width: 200px;
+}
 .events .grilla {
-  border-top: 1px dotted white;
-  border-bottom: 1px dotted white;
   width: 100%;
-  height: 100px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   position: relative;
-  border-radius: 12px;
   margin-top: 1rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  overflow-x: auto;
+  max-height: 60vh;
 }
 .events .grilla h3 {
   font-size: 2rem;
 }
+.events .grilla .evento {
+  border-radius: 12px;
+  border-top: 1px dotted white;
+  border-bottom: 1px dotted white;
+  text-align: center;
+  padding: 0.5rem;
+  width: 100%;
+  gap: 2rem;
+  position: relative;
+  top: 0;
+}
+.events .grilla .evento h4 {
+  font-weight: bolder;
+  font-size: 1.2rem;
+}
+.events .grilla .evento p {
+  font-size: 1rem;
+}
 
+.events .filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  margin-top: 1rem;
+}
+.events .filters select {
+  border: none;
+  padding: 8px 12px;
+}
+.events .filters form {
+  display: flex;
+  align-items: center;
+}
+
+.events .filters input
+ {
+  padding: 8px 12px;
+  background-color: rgba(0,0,0, 0.5);
+  border: none;
+  border-bottom: 1px dotted white;
+  color: white;
+  width: 200px;
+}
+.events .filters button {
+  background-color: rgb(243, 215, 123);
+  border: none;
+  padding: 4px 8px;
+}
 /* section-2 */
 .galery {
   height: 100vh;
@@ -515,8 +568,13 @@ nav .icon img {
   color: white;
   width: 100%;
   cursor: pointer;
+  transition: .5s;
 } 
 .rooms .button-filter:hover {
+  background: white;
+  color: black;
+}
+.rooms .button-filter.active {
   background: white;
   color: black;
 }
@@ -731,4 +789,43 @@ nav .icon img {
 .img-slider {
   width: 100%;
   height: 100%;
+}
+
+/* image-viewer */
+.image-viewer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.image-viewer img {
+  width: 90%;
+  z-index: 210;
+  position: fixed;
+}
+.image-viewer .image-backdrop {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  
+}
+.image-viewer .close-button {
+  position: fixed;
+  right: 2rem;
+  top: 2rem;
+  font-weight: lighter;
+  border: none;
+  background: none;
+  color: white;
+  font-size: 1.5rem;
+  z-index: 220;
 }

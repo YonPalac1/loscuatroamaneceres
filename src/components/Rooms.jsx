@@ -1,4 +1,4 @@
-import { Reveal } from "./Reveal";
+import { useState } from 'react';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -8,11 +8,23 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 import { ATARDECER, AMANECER, BOSQUES } from "../../contants";
-import { useState } from "react";
+import { Reveal } from "./Reveal";
 
 
-const Rooms = ({ bullet }) => {
-    const [rooms, setRooms] = useState(AMANECER)
+const Rooms = ({ bullet, setVid, setImageView, setImageActive }) => {
+    const [rooms, setRooms] = useState(AMANECER);
+    const [active, setActive] = useState("am")
+
+    const handleRooms = (selected, active, vid) => {
+        setRooms(selected)
+        setActive(active)
+        setVid(vid)
+    }
+
+    const handleImage = (img) => {
+        setImageView(img)
+        setImageActive(true)
+    }
     
     return <section className="rooms section-2"
         id="espacios"
@@ -29,9 +41,9 @@ const Rooms = ({ bullet }) => {
             </Reveal>
         </div>
         <div className="filters">
-            <button onClick={() => setRooms(AMANECER)} className="button-filter">Amaneceres</button>
-            <button onClick={() => setRooms(BOSQUES)} className="button-filter">Bosque</button>
-            <button onClick={() => setRooms(ATARDECER)} className="button-filter">Atardecer</button>
+            <button onClick={() => handleRooms(AMANECER, "am", 2)} className={`button-filter ${active === "am" ? "active" : ""}`}>Habitaciones Amaneceres</button>
+            <button onClick={() => handleRooms(BOSQUES, "bo", 5)} className={`button-filter ${active === "bo" ? "active" : ""}`}>Habitaciones Bosques</button>
+            <button onClick={() => handleRooms(ATARDECER, "at", 6)} className={`button-filter ${active === "at" ? "active" : ""}`}>Habitaciones Atardeceres</button>
         </div>
         <div className="container-photos">
             <Swiper
@@ -70,7 +82,7 @@ const Rooms = ({ bullet }) => {
                 {
                     rooms.map((img, i) => (
                         <SwiperSlide key={i}>
-                            <img className="img-slider" src={img}></img>
+                            <img className="img-slider" src={img} onClick={() => handleImage(img)}></img>
                         </SwiperSlide>
                     ))
                 }

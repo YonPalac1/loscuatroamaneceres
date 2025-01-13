@@ -1,5 +1,4 @@
-import { useState, useEffect } from "react";
-import { Reveal } from "./Reveal";
+import { useState, useEffect, useContext } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import "swiper/css";
@@ -7,9 +6,10 @@ import "swiper/css/autoplay";
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
+import { Reveal } from "./Reveal";
 import { GALERY } from "../../contants";
 
-const Galery = ({ bullet }) => {
+const Galery = ({ bullet, setImageView, setImageActive }) => {
     const [paralaxPosition, setParalaxPosition] = useState({ x: 0, y: 0 });
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
@@ -29,6 +29,11 @@ const Galery = ({ bullet }) => {
         const paralaxY = mousePosition.y * paralaxSpeed;
         setParalaxPosition({ x: paralaxX, y: paralaxY });
     }, [mousePosition]);
+
+    const handleImage = (img) => {
+        setImageView(img)
+        setImageActive(true)
+    }
 
     return <section className="galery section-1"
         id="espacios"
@@ -73,7 +78,7 @@ const Galery = ({ bullet }) => {
             {
                 GALERY.map((img, i) => (
                     <SwiperSlide key={i}>
-                        <img className="img-slider" src={img}></img>
+                        <img className="img-slider" src={img} onClick={() => handleImage(img)}></img>
                     </SwiperSlide>
                 ))
             }

@@ -1,28 +1,35 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Reveal } from "./Reveal";
-
-import icon from "../assets/icon.png";
+import { CALENDAR, MONTHS } from "../../contants";
+import Grilla from "./Grilla";
 
 const Events = ({ bullet }) => {
-    const [paralaxPosition, setParalaxPosition] = useState({ x: 0, y: 0 });
-    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+    const [eventoBuscado, setEventoBuscado] = useState('');
+    const [mesBuscado, setMesBuscado] = useState('');
+    const [eventos, setEventos] = useState(CALENDAR);
 
-    useEffect(() => {
-        const handleMouseMove = (event) => {
-            setMousePosition({ x: event.clientX, y: event.clientY });
-        };
-        document.addEventListener('mousemove', handleMouseMove);
-        return () => {
-            document.removeEventListener('mousemove', handleMouseMove);
-        };
-    }, []);
+    const handleBuscarEvento = (e) => {
+        const textoBuscado = e.target.value.toLowerCase();
+        setEventoBuscado(textoBuscado);
 
-    useEffect(() => {
-        const paralaxSpeed = 0.05; // ajusta la velocidad del paralax
-        const paralaxX = mousePosition.x * paralaxSpeed;
-        const paralaxY = mousePosition.y * paralaxSpeed;
-        setParalaxPosition({ x: paralaxX, y: paralaxY });
-    }, [mousePosition]);
+        if (textoBuscado === "") {
+            setEventos(CALENDAR)
+        } else {
+            const eventosFiltrados = CALENDAR.filter((evento) => {
+                return evento.evento.toLocaleLowerCase().includes(eventoBuscado)
+            })
+            setEventos(eventosFiltrados)
+        }
+    };
+
+    const handleBuscarMes = (e) => {
+        const mesFiltrado = e.target.value.toLowerCase();
+        setEventoBuscado("")
+        setMesBuscado(mesFiltrado);
+
+        
+
+    }
 
     return <section className="events section-4"
         id="eventos"
@@ -36,9 +43,24 @@ const Events = ({ bullet }) => {
             </Reveal>
         </div>
         <div className="line"></div>
-        <div className="grilla">
-            <h3>Proximamente</h3>
+        <div className="filters">
+            <input
+                type="text"
+                value={eventoBuscado}
+                onChange={handleBuscarEvento}
+                placeholder="Buscar evento"
+            />
+
+            <select value={mesBuscado} onChange={handleBuscarMes}>
+                <option value="">Todos los meses</option>
+                {MONTHS.map((mes, i) => (
+                    <option key={i} value={mes}>
+                        {mes}
+                    </option>
+                ))}
+            </select>
         </div>
+        <Grilla eventos={eventos} mesBuscado={mesBuscado} setEventos={setEventos} calendar={CALENDAR} />
     </section>
 }
 export default Events;

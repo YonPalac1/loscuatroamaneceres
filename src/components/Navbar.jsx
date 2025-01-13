@@ -5,7 +5,7 @@ import icon from "../assets/icon.png";
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
-    const { bullet, setBullet } = useContext(MyContext);
+    const { bullet, setBullet, setVid } = useContext(MyContext);
     const seccionHeight = window.innerHeight;
 
     useEffect(() => {
@@ -15,8 +15,10 @@ const Navbar = () => {
 
             if (scrollPosition > seccionHeight) {
                 setBullet(nuevaSeccion)
+                setVid(nuevaSeccion)
             } else {
                 setBullet(0)
+                setVid(0)
             }
         };
 
