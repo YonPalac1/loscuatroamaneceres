@@ -411,11 +411,12 @@ nav .icon img {
 
 .events .filters {
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
   align-items: center;
   width: 100%;
   position: relative;
   margin-top: 1rem;
+  gap: 2rem;
 }
 .events .filters select {
   border: none;
@@ -433,7 +434,7 @@ nav .icon img {
   border: none;
   border-bottom: 1px dotted white;
   color: white;
-  width: 200px;
+  width: 300px;
 }
 .events .filters button {
   background-color: rgb(243, 215, 123);
@@ -806,7 +807,7 @@ section.contact {
   height: 100%;
 }
 .image-viewer img {
-  width: 90%;
+  width: 50%;
   z-index: 210;
   position: fixed;
 }
@@ -818,7 +819,6 @@ section.contact {
   top: 0;
   left: 0;
   z-index: 200;
-  
 }
 .image-viewer .close-button {
   position: fixed;
@@ -831,7 +831,13 @@ section.contact {
   font-size: 1.5rem;
   z-index: 220;
 }
-
+@media screen and (max-width: 592px) {
+  .image-viewer img {
+    width: 90%;
+    z-index: 210;
+    position: fixed;
+  }
+}
 /* footer */
 footer {
   background: rgb(36, 36, 36);

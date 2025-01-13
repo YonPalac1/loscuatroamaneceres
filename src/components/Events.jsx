@@ -48,7 +48,7 @@ const Events = ({ bullet }) => {
                 type="text"
                 value={eventoBuscado}
                 onChange={handleBuscarEvento}
-                placeholder="Buscar evento"
+                placeholder="Buscar por evento"
             />
 
             <select value={mesBuscado} onChange={handleBuscarMes}>
@@ -60,7 +60,7 @@ const Events = ({ bullet }) => {
                 ))}
             </select>
         </div>
-        <Grilla eventos={eventos} mesBuscado={mesBuscado} setEventos={setEventos} calendar={CALENDAR} />
+        <Grilla eventos={eventos} mesBuscado={mesBuscado} calendar={CALENDAR} />
     </section>
 }
 export default Events;
