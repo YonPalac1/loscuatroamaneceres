@@ -863,13 +863,14 @@ footer .social {
   flex-direction: column;
   align-items: end;
 }
-footer .info {
+.contact footer .info {
   text-align: justify;
-  width: 40%;
+  width: 33.3%;
 
 }
-footer .info p {
-  font-size: 0.8rem;
+.contact footer .info p {
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 footer .info span,
 footer .social span {

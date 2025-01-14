@@ -27,8 +27,10 @@ const Events = ({ bullet }) => {
         setEventoBuscado("")
         setMesBuscado(mesFiltrado);
 
-        
-
+        const eventosFiltrados = CALENDAR.filter((evento) => {
+            return evento.mes.toLocaleLowerCase().includes(mesFiltrado)
+        })
+        setEventos(eventosFiltrados);
     }
 
     return <section className="events section-4"
