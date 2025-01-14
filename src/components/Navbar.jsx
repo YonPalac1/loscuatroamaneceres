@@ -48,9 +48,9 @@ const Navbar = () => {
         <button className='contact-button'>Contactanos</button>
         <div className="nav-items">
             {['home', 'galery', 'habitaciones', 'servicios', 'eventos', 'contacto'].map((seccion, index) => (
-                <a href={`#${seccion}`} onClick={() => handleBullet(index)} key={index} id={`seccion-${index}`} className={`bullet ${index === bullet && "active"}`} data-tooltip={`${seccion}`}>
+                <button onClick={() => handleBullet(index)} key={index} id={`seccion-${index}`} className={`bullet ${index === bullet && "active"}`} data-tooltip={`${seccion}`}>
                     {index === bullet}
-                </a>
+                </button>
             ))}
         </div>
         <Link to="/" className='icon'>

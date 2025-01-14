@@ -36,7 +36,6 @@ body {
   overflow-x: hidden;
 
   font-size: 22px;
-  cursor: none;
 }
 
 .backdrop {
@@ -917,8 +916,8 @@ footer img {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  animation: loading 3s linear;
-  animation-delay: 3s;
+  animation: loading 1s ease-in-out;
+  animation-delay: 2s;
 }
 .loading h1 {
   position: fixed;
@@ -948,8 +947,7 @@ footer img {
   position: absolute; 
 }
 .loading.active .circle .circle-1 {
-  animation: move1 2s linear;
-  animation-delay: 3s;
+  animation: move1 1s ease-in-out;
 }
 @keyframes spin {
   from {

@@ -21,7 +21,7 @@ import Container from '../components/Container';
 import ImageViewer from '../components/ImageViewer';
 
 const Home = () => {
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(false);
     const { bullet, setBullet, setHeight, vid, setVid, imageView, imageActive, setImageView, setImageActive } = useContext(MyContext);
     const secciones = [
         <Section1 bullet={bullet} setBullet={setBullet} />,
@@ -39,7 +39,9 @@ const Home = () => {
 
         setTimeout(() => {
             setLoading(false)
-        }, [6000])
+            window.scrollTo(0)
+            setBullet(0)
+        }, [2000])
     }, [heightRef, bullet, imageView])
 
     return (

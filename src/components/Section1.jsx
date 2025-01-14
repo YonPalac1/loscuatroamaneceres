@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Reveal } from '../components/Reveal';
 import wave from '../assets/wave.png';
 
-const Section1 = ({ bullet }) => {
+const Section1 = ({ bullet, loading }) => {
     const [paralaxPosition, setParalaxPosition] = useState({ x: 0, y: 0 });
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
@@ -14,7 +14,7 @@ const Section1 = ({ bullet }) => {
         return () => {
             document.removeEventListener('mousemove', handleMouseMove);
         };
-    }, []);
+    }, [loading]);
 
     useEffect(() => {
         const paralaxSpeed = 0.05; // ajusta la velocidad del paralax
@@ -31,7 +31,7 @@ const Section1 = ({ bullet }) => {
             display: bullet === 0 ? "flex" : "none"
         }}>
         <div className="title">
-            <Reveal delay={1.5}>
+            <Reveal delay={3.5}>
                 <div className="circle"
                     style={{
                         transform: `translate(${paralaxPosition.x}px, ${paralaxPosition.y}px)`,
@@ -39,10 +39,10 @@ const Section1 = ({ bullet }) => {
                     }}></div>
             </Reveal>
             <div className='text-wave'>
-                <Reveal delay={2}>
+                <Reveal delay={2.5}>
                     <h2>Los cuatro amaneceres</h2>
                 </Reveal>
-                <Reveal delay={2.5}>
+                <Reveal delay={3}>
                     <p>Complejo dedicado a brindar servicio de Hoteleria para Retiros, Cursos y Seminarios</p>
                 </Reveal>
                 <img src={wave} alt=""></img>
@@ -52,12 +52,12 @@ const Section1 = ({ bullet }) => {
         {/* <a href=""><h1>Los cuatro amaneceres</h1></a> */}
 
         <div className='subtitle'>
-            <Reveal delay={2.8}>
+            <Reveal delay={3.8}>
                 <p>Ubicado a 90km de CABA, en la localidad de Tomas Jofré, partido de Mercedes. </p>
             </Reveal>
         </div>
         <div className="discover">
-            <Reveal delay={2.5}>
+            <Reveal delay={3.5}>
                 <h3>Descubre</h3>
             </Reveal>
         </div>
