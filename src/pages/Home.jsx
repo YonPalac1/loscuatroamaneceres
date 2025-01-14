@@ -42,7 +42,6 @@ const Home = () => {
         }, [6000])
     }, [heightRef, bullet, imageView])
 
-
     return (
         <Container bullet={bullet}>
         <div className={`loading ${loading ? "active" :""}`}>
