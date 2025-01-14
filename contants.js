@@ -143,7 +143,7 @@ export const CALENDAR = [
     {
         mes: "Agosto",
         fecha: "15-18",
-        evento: "Swast Yogashala | Rishikesh"
+        evento: "Swasti Yogashala | Rishikesh"
     },
     {
         mes: "Agosto",

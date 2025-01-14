@@ -39,8 +39,6 @@ const Home = () => {
 
         setTimeout(() => {
             setLoading(false)
-            window.scrollTo(0)
-            setBullet(0)
         }, [2000])
     }, [heightRef, bullet, imageView])
 

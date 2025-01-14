@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Reveal } from '../components/Reveal';
 import wave from '../assets/wave.png';
 
-const Section1 = ({ bullet, loading }) => {
+const Section1 = ({ bullet, setBullet }) => {
     const [paralaxPosition, setParalaxPosition] = useState({ x: 0, y: 0 });
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
@@ -14,7 +14,7 @@ const Section1 = ({ bullet, loading }) => {
         return () => {
             document.removeEventListener('mousemove', handleMouseMove);
         };
-    }, [loading]);
+    }, []);
 
     useEffect(() => {
         const paralaxSpeed = 0.05; // ajusta la velocidad del paralax
@@ -56,7 +56,7 @@ const Section1 = ({ bullet, loading }) => {
                 <p>Ubicado a 90km de CABA, en la localidad de Tomas Jofré, partido de Mercedes. </p>
             </Reveal>
         </div>
-        <div className="discover">
+        <div className="discover" onClick={() => setBullet(1)}>
             <Reveal delay={3.5}>
                 <h3>Descubre</h3>
             </Reveal>
