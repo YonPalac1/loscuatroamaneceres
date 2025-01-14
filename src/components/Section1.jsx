@@ -39,7 +39,7 @@ const Section1 = ({ bullet, setBullet }) => {
                     }}></div>
             </Reveal>
             <div className='text-wave'>
-                <Reveal delay={2.5}>
+                <Reveal delay={2}>
                     <h2>Los cuatro amaneceres</h2>
                 </Reveal>
                 <Reveal delay={3}>
