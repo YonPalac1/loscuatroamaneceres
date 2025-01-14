@@ -369,7 +369,7 @@ nav .icon img {
 .events {
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   padding-top: 4rem;
 }
 .events .line {
@@ -443,6 +443,9 @@ nav .icon img {
   padding: 4px 8px;
 }
 @media screen and (max-width: 493px) {
+  .events {
+    padding-top: 4.5rem;
+  }
   .events .filters {
     gap: 0.8rem;
   }
