@@ -21,6 +21,7 @@ import Container from '../components/Container';
 import ImageViewer from '../components/ImageViewer';
 
 const Home = () => {
+    const [loading, setLoading] = useState(true);
     const { bullet, setBullet, setHeight, vid, setVid, imageView, imageActive, setImageView, setImageActive } = useContext(MyContext);
     const secciones = [
         <Section1 bullet={bullet} setBullet={setBullet} />,
@@ -34,11 +35,25 @@ const Home = () => {
     const heightRef = useRef(null);
 
     useEffect(() => {
-        setHeight(heightRef.current.offsetHeight)
+        setHeight(heightRef?.current.offsetHeight)
+
+        setTimeout(() => {
+            setLoading(false)
+        }, [6000])
     }, [heightRef, bullet, imageView])
+
 
     return (
         <Container bullet={bullet}>
+        <div className={`loading ${loading ? "active" :""}`}>
+            <div className="circle">
+                <div className='little-circle circle-1'></div>
+                <div className='little-circle circle-2'></div>
+                <div className='little-circle circle-3'></div>
+                <div className='little-circle circle-4'></div>
+            </div>
+            <h1>los cuatro amaneceres</h1>
+        </div>
             {
                 images?.map((img, i) => (
                     <video autoPlay loop muted
@@ -64,7 +79,7 @@ const Home = () => {
                 imageActive && <ImageViewer image={imageView} setImageActive={setImageActive} />
             }
         </Container >
-    );
+    )
 };
 
 export default Home;

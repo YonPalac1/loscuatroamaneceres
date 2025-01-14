@@ -39,10 +39,10 @@ const Section1 = ({ bullet }) => {
                     }}></div>
             </Reveal>
             <div className='text-wave'>
-                <Reveal delay={1}>
+                <Reveal delay={2}>
                     <h2>Los cuatro amaneceres</h2>
                 </Reveal>
-                <Reveal delay={1.5}>
+                <Reveal delay={2.5}>
                     <p>Complejo dedicado a brindar servicio de Hoteleria para Retiros, Cursos y Seminarios</p>
                 </Reveal>
                 <img src={wave} alt=""></img>
@@ -52,12 +52,12 @@ const Section1 = ({ bullet }) => {
         {/* <a href=""><h1>Los cuatro amaneceres</h1></a> */}
 
         <div className='subtitle'>
-            <Reveal delay={1.5}>
+            <Reveal delay={2.8}>
                 <p>Ubicado a 90km de CABA, en la localidad de Tomas Jofré, partido de Mercedes. </p>
             </Reveal>
         </div>
         <div className="discover">
-            <Reveal delay={1.5}>
+            <Reveal delay={2.5}>
                 <h3>Descubre</h3>
             </Reveal>
         </div>
