@@ -42,7 +42,7 @@ const Galery = ({ bullet, setImageView, setImageActive }) => {
         }}
     >
         <Swiper
-        className="swip-container"
+            className="swip-container"
             autoplay
             spaceBetween={0}
             pagination={{ clickable: true }}
@@ -78,11 +78,14 @@ const Galery = ({ bullet, setImageView, setImageActive }) => {
             {
                 GALERY.map((img, i) => (
                     <SwiperSlide key={i}>
-                        <img className="img-slider" src={img} onClick={() => handleImage(img)}></img>
+                        <Reveal>
+                            <img className="img-slider" src={img} onClick={() => handleImage(img)}></img>
+                        </Reveal>
                     </SwiperSlide>
                 ))
             }
-            </Swiper>
+        </Swiper>
+
         <div className="progress-bar">
             <Reveal delay={0.5}>
                 <p>Contamos con habitaciones. 3 salones 70m2, 120m2 y 260m2 y espacios verdes para actividades. Además disponemos de un bosque de 8 hectareas, comedor y servicio de gastronomia de cocina natural.</p>

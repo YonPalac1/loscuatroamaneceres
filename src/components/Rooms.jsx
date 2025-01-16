@@ -25,7 +25,7 @@ const Rooms = ({ bullet, setVid, setImageView, setImageActive }) => {
         setImageView(img)
         setImageActive(true)
     }
-    
+
     return <section className="rooms section-2"
         id="espacios"
         style={{
@@ -82,7 +82,10 @@ const Rooms = ({ bullet, setVid, setImageView, setImageActive }) => {
                 {
                     rooms.map((img, i) => (
                         <SwiperSlide key={i}>
-                            <img className="img-slider" src={img} onClick={() => handleImage(img)}></img>
+                            <Reveal>
+
+                                <img className="img-slider" src={img} onClick={() => handleImage(img)}></img>
+                            </Reveal>
                         </SwiperSlide>
                     ))
                 }

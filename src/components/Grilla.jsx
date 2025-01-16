@@ -9,8 +9,9 @@ const Grilla = ({ eventos }) => {
             : eventos?.map((item, i) => (
                 <div className="evento" key={i}>
                     <span></span>
-                    <p>{item.fecha} | {item.mes}</p>
                     <h4>{item.evento}</h4>
+                    <span>desde:</span>
+                    <p>{item.fecha} | {item.mes}</p>
                 </div>
             ))
         }

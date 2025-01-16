@@ -15,12 +15,13 @@
 html {
   scroll-behavior: smooth;
 }
+
 :root {
   font-family: mdserif;
   color: white;
   --cursorXPos: -100px;
   --cursorYPos: 60px;
-  
+
 }
 
 * {
@@ -30,6 +31,7 @@ html {
   list-style: none;
   text-decoration: none;
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -93,12 +95,13 @@ section {
   width: 100%;
   transition: 1s ease-in-out;
 }
+
 /* section */
 
 /* Animaciones de secciones */
 .section-container-5 .section-5 {
   position: absolute;
-} 
+}
 
 .images-bg {
   width: 100%;
@@ -160,18 +163,22 @@ nav .contact-button {
   transition: 0.5s;
   font-size: 1.2rem;
 }
+
 nav .contact-button:hover {
   color: black;
   background: white;
 }
+
 nav .icon {
   position: absolute;
   top: 1rem;
   left: 1rem;
 }
+
 nav .icon img {
   width: 120px;
 }
+
 @media screen and (max-width: 800px) {
   nav .nav-items .bullet {
     width: 0.5rem;
@@ -209,25 +216,30 @@ nav .icon img {
   margin-left: -100px;
   text-align: center;
 }
+
 .title {
   position: relative;
   display: flex;
   align-items: center;
 }
+
 .home .text-wave p {
   font-size: 1rem;
   margin-top: 1rem;
 }
+
 .home .subtitle {
   position: absolute;
   bottom: 4rem;
   left: 3rem;
   width: 50%;
 }
+
 .home .subtitle p {
   font-size: 1rem;
   font-weight: lighter;
 }
+
 .title img {
   width: fit-content;
 }
@@ -240,6 +252,7 @@ nav .icon img {
   left: -100px;
   top: 80px;
 }
+
 .home .discover {
   position: absolute;
   bottom: 1rem;
@@ -323,14 +336,17 @@ nav .icon img {
   .title {
     justify-content: center;
   }
+
   .title .text-wave p {
     font-size: 0.8rem;
   }
+
   .title .text-wave {
     position: relative;
     margin-left: 0;
     text-align: center;
   }
+
   .text-wave img,
   .title h2 {
     margin-left: 0;
@@ -355,17 +371,20 @@ nav .icon img {
     margin-bottom: 1rem;
     right: 1rem;
   }
+
   .home .subtitle {
     position: absolute;
     margin-bottom: 2rem;
     left: 1rem;
     width: 50%;
   }
+
   .home .subtitle p {
     font-size: 0.8rem;
   }
 }
-/* section 1 */
+
+/* eventos */
 .events {
   flex-direction: column;
   align-items: center;
@@ -378,29 +397,32 @@ nav .icon img {
 }
 .events .grilla {
   width: 100%;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   align-items: center;
   position: relative;
   margin-top: 1rem;
   background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 12px;
   overflow-x: auto;
   max-height: 60vh;
+  gap: 0.5rem;
 }
 .events .grilla h3 {
   font-size: 2rem;
 }
 .events .grilla .evento {
-  border-radius: 12px;
-  border-top: 1px dotted white;
-  border-bottom: 1px dotted white;
-  text-align: center;
+  border: 1px dotted white;
   padding: 0.5rem;
   width: 100%;
   gap: 2rem;
   position: relative;
-  top: 0;
+  top: 0;  
+  height: 100%;
+  transition: .5s;
+  cursor: pointer;
+}
+.events .grilla .evento:hover {
+  border: 1px solid white;
 }
 .events .grilla .evento h4 {
   font-weight: bolder;
@@ -408,6 +430,10 @@ nav .icon img {
 }
 .events .grilla .evento p {
   font-size: 1rem;
+  line-height: 8px;
+}
+.events .grilla .evento span {
+  font-size: 14px;
 }
 
 .events .filters {
@@ -449,6 +475,9 @@ nav .icon img {
   .events .filters {
     gap: 0.8rem;
   }
+  .events .grilla {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 /* section-2 */
 .galery {
@@ -458,6 +487,7 @@ nav .icon img {
   justify-content: center;
   padding-bottom: 2rem;
 }
+
 .galery h2 {
   line-height: 3rem;
   left: -100px;
@@ -493,7 +523,7 @@ nav .icon img {
   width: 10px;
   border-radius: 100%;
   background-color: white;
-  
+
   position: absolute;
   transform: translateX(1rem);
 }
@@ -502,9 +532,11 @@ nav .icon img {
   width: 100%;
   height: 100%;
 }
+
 .galery .swip-container {
   height: 60%;
 }
+
 @media screen and (max-width: 972px) {
   .galery h2 {
     width: 100%;
@@ -525,26 +557,30 @@ nav .icon img {
     order: 2;
   }
 }
+
 @media screen and (max-width: 388px) {
   .galery h2 {
     font-size: 1.5rem;
   }
 }
+
 @media screen and (max-width: 493px) {
   .galery .title {
     justify-content: start;
     text-align: left;
     margin-top: 3rem;
   }
-  
+
   .galery .title h2 {
     line-height: 2rem;
     left: 0;
   }
+
   .galery .swip-container {
     height: 50%;
   }
 }
+
 /* Rooms */
 .rooms {
   height: 100vh;
@@ -555,10 +591,12 @@ nav .icon img {
   padding-top: 4rem;
   justify-content: center;
 }
+
 .rooms .title {
   display: flex;
   flex-direction: column;
 }
+
 .rooms .title p {
   font-size: 1rem;
   text-align: center;
@@ -566,11 +604,13 @@ nav .icon img {
   margin: auto;
   margin-top: 2rem;
 }
+
 .rooms .filters {
   display: flex;
   justify-content: space-around;
   width: 100%;
 }
+
 .rooms .button-filter {
   background: none;
   border: 1px dotted white;
@@ -579,29 +619,35 @@ nav .icon img {
   width: 100%;
   cursor: pointer;
   transition: .5s;
-} 
+}
+
 .rooms .button-filter:hover {
   background: white;
   color: black;
 }
+
 .rooms .button-filter.active {
   background: white;
   color: black;
 }
+
 .rooms .container-photos {
   display: flex;
   min-height: 33.5%;
 }
+
 @media screen and (max-width: 493px) {
   .rooms .title p {
     font-size: 0.8rem;
     width: 100%;
     margin-top: 1rem;
   }
+
   .rooms .filters {
     margin-top: 1rem;
   }
 }
+
 /* services */
 .services {
   display: flex;
@@ -672,15 +718,18 @@ nav .icon img {
 .services .descriptions .item:hover h3 {
   color: #ccc;
 }
+
 @media screen and (max-width: 380px) {
   .services h2 {
     font-size: 1.5rem;
   }
+
   .services h3 {
     font-size: 1.3rem;
     line-height: 1rem;
   }
 }
+
 @media screen and (max-width: 493px) {
   .services .title {
     right: 0;
@@ -700,49 +749,61 @@ nav .icon img {
 section.contact {
   padding: 2rem 6rem 0;
 }
+
 .contact {
   gap: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
 }
+
 .contact .line {
   width: 20%;
   border: 1px dotted #ccc;
 }
+
 .contact .info-container {
   display: flex;
   gap: 1rem;
   background-color: rgba(0, 0, 0, 0.5);
 }
+
 .contact .info p {
   font-size: 1rem;
 }
-.contact .info-container > div {
+
+.contact .info-container>div {
   width: 50%;
   position: relative;
   padding: 2rem;
 }
+
 .contact .map ul li {
   font-size: 1rem;
   margin-top: 1rem;
 }
+
 .contact .map ul li span {
   font-weight: bold;
   margin-right: 1rem;
 }
+
 .contact .map {
   display: flex;
   flex-direction: column;
 }
+
 .form-container {
   padding-bottom: 1rem;
 }
+
 .form-container form {
   display: flex;
   flex-direction: column;
   margin-top: 1rem;
 }
+
 .form-container form textarea,
 .form-container form input {
   border: none;
@@ -752,44 +813,55 @@ section.contact {
   padding: 8px 12px;
 
 }
+
 .form-container form input:focus {
   border: none;
 }
+
 .form-container form label {
   font-size: 1rem;
   margin-top: 0.8rem;
 }
+
 .form-container form button {
   margin-top: 1rem;
   padding: 8px 12px;
   cursor: pointer;
 }
+
 .form-container form button:hover {
   background-color: rgb(235, 228, 167);
 }
+
 @media screen and (max-width: 850px) {
   .contact .info {
     padding: 2rem;
   }
+
   .form-container {
     padding: 2rem;
   }
 }
+
 @media screen and (max-width: 592px) {
   .contact .info-container {
     flex-direction: column;
   }
+
   .form-container {
     padding-bottom: 1rem;
-    border-left:none;
+    border-left: none;
     border-top: 1px dotted white;
   }
+
   .form-container form {
     min-width: 250px;
   }
-  .contact .info-container > div {
+
+  .contact .info-container>div {
     width: 100%;
   }
+
   .contact .info-container .info {
     text-align: center;
   }
@@ -799,7 +871,8 @@ section.contact {
 
 .swiper-wrapper {
   width: 90vw;
-} 
+}
+
 .img-slider {
   width: 100%;
   height: 100%;
@@ -817,11 +890,13 @@ section.contact {
   width: 100%;
   height: 100%;
 }
+
 .image-viewer img {
   width: 50%;
   z-index: 210;
   position: fixed;
 }
+
 .image-viewer .image-backdrop {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.5);
@@ -831,6 +906,7 @@ section.contact {
   left: 0;
   z-index: 200;
 }
+
 .image-viewer .close-button {
   position: fixed;
   right: 2rem;
@@ -842,6 +918,7 @@ section.contact {
   font-size: 1.5rem;
   z-index: 220;
 }
+
 @media screen and (max-width: 592px) {
   .image-viewer img {
     width: 90%;
@@ -849,9 +926,10 @@ section.contact {
     position: fixed;
   }
 }
+
 /* footer */
 footer {
-  background: rgb(36, 36, 36);
+  background: rgb(233, 233, 233);
   width: 100vw;
   position: relative;
   z-index: 14;
@@ -864,35 +942,45 @@ footer {
   align-items: center;
   gap: 2rem;
 }
+
 footer .social {
   display: flex;
   flex-direction: column;
   align-items: end;
 }
+
 .contact footer .info {
   text-align: justify;
   width: 33.3%;
 
 }
+
 .contact footer .info p {
   font-size: 12px;
   font-family: Arial, Helvetica, sans-serif;
+  color: black;
 }
+
 footer .info span,
 footer .social span {
   text-decoration: underline;
   margin-bottom: 1rem;
+  color: black;
 }
+
 footer img {
   max-width: 320px;
 }
+
 @media screen and (max-width: 592px) {
   .contact footer {
     flex-direction: column;
   }
-  .contact footer .info  {
+
+  .contact footer .info {
     width: 100%;
   }
+
   .contact footer .social {
     display: flex;
     flex-direction: column;
@@ -901,75 +989,19 @@ footer img {
     width: 100%;
     padding: 0 2rem;
   }
+
   .contact footer img {
     order: 5;
   }
 }
 
 /* loading */
-.loading {
-  display: none;
-}
-.loading.active {
-  position: fixed;
-  z-index: 300;
+
+#canvas {
   width: 100%;
-  height: 100%;
-  background-color: rgb(36, 27, 27);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  animation: loading 1s ease-in-out;
-  animation-delay: 2s;
-}
-.loading h1 {
-  position: fixed;
-}
-@keyframes loading {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-.loading.active .circle {
-  position: relative;
-  animation: spin 2s linear;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  left: 0;
-  top: 0;
-}
-.loading.active .circle .little-circle {
-  border: 1px dotted white;
-  width: 100px;
-  height: 100px;
-  border-radius: 100%;
-  position: absolute; 
-}
-.loading.active .circle .circle-1 {
-  animation: move1 1s ease-in-out;
-}
-@keyframes spin {
-  from {
-    width: 200px;
-    height: 200px;
-  }
-  to {
-    width: 500px;
-    height: 500px;
-  }
-}
-@keyframes move1 {
-  from {
-    width: 200px;
-    height: 200px;
-  }
-  to {
-    width: 500px;
-    height: 500px;
-  }
+  height: 100vh;
+  z-index: 500;
+
+  background: rgb(45, 0, 0);
+  background: linear-gradient(180deg, rgb(26, 0, 0) 0%, rgb(11, 8, 1) 100%);
 }
