@@ -9,11 +9,11 @@ export class ParticlesClass {
     draw(ctx) {
         ctx.fillStyle = this.style;
         ctx.beginPath();
-        ctx.arc(this.width, this.height, this.size, 0, Math.PI * 2);
+        ctx.arc(this.width, this.height, this.size, 0, Math.PI * 5);
         ctx.fill();
     }
     update() {
-        this.height -= 0.5
+        this.height += 0.5
         this.width += 0.2
         this.size -= 0.1
     }

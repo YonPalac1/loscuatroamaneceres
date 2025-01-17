@@ -1,7 +1,10 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect } from "react";
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import "swiper/css";
+import "swiper/css/bundle"
+import 'swiper/css/navigation';
 import "swiper/css/autoplay";
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
@@ -43,10 +46,12 @@ const Galery = ({ bullet, setImageView, setImageActive }) => {
     >
         <Swiper
             className="swip-container"
-            autoplay
+            modules={[Navigation, Pagination, Scrollbar, A11y]}
             spaceBetween={0}
-            pagination={{ clickable: true }}
+            scrollbar={{ draggable: true }}
             slidesPerView={4}
+            onSwiper={(swiper) => console.log(swiper)}
+            onSlideChange={() => console.log('slide change')}
             breakpoints={{
                 300: {
                     slidesPerView: 2,
@@ -90,9 +95,6 @@ const Galery = ({ bullet, setImageView, setImageActive }) => {
             <Reveal delay={0.5}>
                 <p>Contamos con habitaciones. 3 salones 70m2, 120m2 y 260m2 y espacios verdes para actividades. Además disponemos de un bosque de 8 hectareas, comedor y servicio de gastronomia de cocina natural.</p>
             </Reveal>
-            <div className='progress'>
-                <div className='dot'></div>
-            </div>
         </div>
     </section>
 }

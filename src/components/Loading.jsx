@@ -57,13 +57,17 @@ const Loading = () => {
 
     window.addEventListener("resize", resizeReset);
 
-    return (
+    return (<div className='canvas'>
+        <div className='circle'>
+            <span>Los cuatro amaneceres</span>
+        </div>
         <canvas
             id="canvas"
             ref={canvasRef}
             width={w}
             height={h}
-        ></canvas>
+            ></canvas>
+            </div>
     );
 };
 

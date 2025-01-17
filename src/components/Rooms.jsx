@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import "swiper/css";
@@ -47,7 +47,7 @@ const Rooms = ({ bullet, setVid, setImageView, setImageActive }) => {
         </div>
         <div className="container-photos">
             <Swiper
-                autoplay
+                modules={[Navigation, Pagination, Scrollbar, A11y]}
                 spaceBetween={0}
                 pagination={{ clickable: true }}
                 slidesPerView={4}
