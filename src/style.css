@@ -709,6 +709,9 @@ nav .icon img {
 .services .descriptions .item .collapse.show {
   height: auto;
   padding-top: 1rem;
+  background: rgba(0,0,0,0.5);
+  padding: 8px;
+  overflow: auto;
 }
 
 .services .descriptions .item {

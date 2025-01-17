@@ -20,7 +20,7 @@ import bo2 from "./src/assets/bosque/bo2.webp"
 import bo3 from "./src/assets/bosque/bo3.webp"
 import bo4 from "./src/assets/bosque/bo4.webp"
 
-export const ITEMS = [{
+export const SERVICES = [{
     title: "Alojamiento",
     description: "Habitaciones con baños privados y aire acondicionado/calefacción. Capacidad máxima de 126 plazas. Diferentes sectores: Campo, Bosque, Piscina y Spa. Habitaciones cuádruples y triples disponibles."
 }, {

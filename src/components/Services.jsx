@@ -1,22 +1,11 @@
 import { useState, useRef } from "react";
 import { Reveal } from "./Reveal";
+import { SERVICES } from "../../contants";
+
 
 const Services = ({ bullet }) => {
     const contentEl = useRef();
     const [active, setActive] = useState(null);
-    const items = [{
-        title: "Habitaciones",
-        description: "Sector Campo: 10 Habitaciones cuádruples. Sector Bosque: 8 Habitaciones triples. Sector Piscina: 5 habitaciones cuádruples. Sector Spa: 5 Habitaciones triples/cuádruples. (Todas con baños privados, aire acondicionado y calefacción)."
-    }, {
-        title: "Pension completa",
-        description: "Sector Campo: 10 Habitaciones cuádruples. Sector Bosque: 8 Habitaciones triples. Sector Piscina: 5 habitaciones cuádruples. Sector Spa: 5 Habitaciones triples/cuádruples. (Todas con baños privados, aire acondicionado y calefacción)."
-    }, {
-        title: "Piscina exterior",
-        description: "Sector Campo: 10 Habitaciones cuádruples. Sector Bosque: 8 Habitaciones triples. Sector Piscina: 5 habitaciones cuádruples. Sector Spa: 5 Habitaciones triples/cuádruples. (Todas con baños privados, aire acondicionado y calefacción)."
-    }, {
-        title: "Salones para actividades",
-        description: "Sector Campo: 10 Habitaciones cuádruples. Sector Bosque: 8 Habitaciones triples. Sector Piscina: 5 habitaciones cuádruples. Sector Spa: 5 Habitaciones triples/cuádruples. (Todas con baños privados, aire acondicionado y calefacción)."
-    }]
 
     const handleToggle = (index) => {
         if (active === index) {
@@ -41,7 +30,7 @@ const Services = ({ bullet }) => {
         </div>
         <div className='descriptions'>
             {
-                items.map((item, index) => (
+                SERVICES.map((item, index) => (
                     <Reveal delay={index} key={index}>
                         <div className='item'>
                             <h3 className='active' onClick={() => handleToggle(index)}>{item.title}</h3>
@@ -49,7 +38,7 @@ const Services = ({ bullet }) => {
                                 className={`collapse ${active === index ? "show" : ""}`}
                                 ref={contentEl} style={
                                     active === index
-                                        ? { height: contentEl.current.scrollHeight + 20 }
+                                        ? { height: contentEl.current.scrollHeight + 30 }
                                         : { height: "0px" }
                                 }>
                                 <p>{item.description}</p>
