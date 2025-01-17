@@ -1039,6 +1039,11 @@ footer img {
   background-color: white;
   height: 2px;
   overflow: unset;
+  position: fixed;
+  bottom: 2rem;
+  width: 80%;
+  right: 0;
+  margin: auto;
 }
 .swiper-scrollbar-drag {
   height: 8px;
