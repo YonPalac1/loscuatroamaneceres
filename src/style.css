@@ -536,7 +536,12 @@ nav .icon img {
 .galery .swip-container {
   height: 60%;
 }
-
+.galery .swip-container .reveal {
+  height: 100%;
+}
+.galery .swip-container .reveal .content-reveal {
+  height: 100%;
+}
 @media screen and (max-width: 972px) {
   .galery h2 {
     width: 100%;
@@ -634,6 +639,12 @@ nav .icon img {
 .rooms .container-photos {
   display: flex;
   min-height: 33.5%;
+}
+.rooms .swiper .reveal {
+  height: 100%;
+}
+.rooms .swiper .reveal .content-reveal {
+  height: 100%;
 }
 
 @media screen and (max-width: 493px) {
