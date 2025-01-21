@@ -53,16 +53,16 @@ const Rooms = ({ bullet, setVid, setImageView, setImageActive }) => {
                 slidesPerView={4}
                 breakpoints={{
                     300: {
-                        slidesPerView: 2,
+                        slidesPerView: 1.5,
                         spaceBetween: 10,
                     },
 
                     382: {
-                        slidesPerView: 2,
+                        slidesPerView: 1.5,
                         spaceBetween: 10,
                     },
                     400: {
-                        slidesPerView: 2,
+                        slidesPerView: 1.5,
                         spaceBetween: 15,
                     },
                     640: {
