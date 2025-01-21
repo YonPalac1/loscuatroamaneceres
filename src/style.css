@@ -176,7 +176,7 @@ nav .icon {
 }
 
 nav .icon img {
-  width: 120px;
+  width: 250px;
 }
 
 @media screen and (max-width: 800px) {
@@ -193,6 +193,12 @@ nav .icon img {
 
   nav ul {
     right: 1rem;
+  }
+  nav .icon img {
+    width: 150px;
+  }
+  nav .contact-button {
+    top: 0.8rem;
   }
 }
 
@@ -650,10 +656,6 @@ nav .icon img {
   .rooms .title p {
     font-size: 0.8rem;
     width: 100%;
-    margin-top: 1rem;
-  }
-
-  .rooms .filters {
     margin-top: 1rem;
   }
 }
