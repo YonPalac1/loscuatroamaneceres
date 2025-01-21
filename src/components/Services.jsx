@@ -43,7 +43,7 @@ const Services = ({ bullet }) => {
                                 }>
                                 <ul>
                                     {item.description.map((list, i) => (
-                                        <li key={i}>{list}</li>
+                                        <li key={i}>- {list}</li>
                                     ))}
 
                                 </ul>

@@ -713,7 +713,6 @@ nav .icon img {
   overflow: hidden;
   transition: height 0.35s ease;
 }
-
 .services .descriptions .item .collapse {
   font-size: 1rem;
 }
@@ -748,11 +747,15 @@ nav .icon img {
 @media screen and (max-width: 493px) {
   .services .title {
     right: 0;
+    width: 30%;
   }
-
+  .services h2 {
+    font-size: 1.3rem;
+  }
   .services .descriptions {
     padding: 0.5rem;
     right: 0;
+    width: 60%;
   }
 
   .services .descriptions .item .collapse p {
