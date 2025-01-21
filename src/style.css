@@ -594,7 +594,6 @@ nav .icon img {
   gap: 2rem;
   padding-bottom: 4rem;
   padding-top: 4rem;
-  justify-content: center;
 }
 
 .rooms .title {
@@ -638,7 +637,7 @@ nav .icon img {
 
 .rooms .container-photos {
   display: flex;
-  min-height: 33.5%;
+  min-height: 60%;
 }
 .rooms .swiper .reveal {
   height: 100%;

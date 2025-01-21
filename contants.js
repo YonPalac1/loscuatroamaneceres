@@ -21,20 +21,17 @@ import bo3 from "./src/assets/bosque/bo3.webp"
 import bo4 from "./src/assets/bosque/bo4.webp"
 
 export const SERVICES = [{
-    title: "Alojamiento",
-    description: "Habitaciones con baños privados y aire acondicionado/calefacción. Capacidad máxima de 126 plazas. Diferentes sectores: Campo, Bosque, Piscina y Spa. Habitaciones cuádruples y triples disponibles."
+    title: "Habitaciones",
+    description: ["Sector amanecer: 10 habitaciones cuadruples.", "Sector bosque: 8 habitaciones triples.", "Sector piscina: 5 habitaciones cuadruples.", "Sector spa: 5 habitaciones triples/cuádruples.","(Todos con baños privados, aire acondicionado y calefacción.)"]
 }, {
     title: "Gastronomía",
-    description: "Pensión completa con menú saludable. Desayuno, almuerzo, merienda y cena incluidos. Cocina natural y fresca."
+    description: ["Brindamos servicio de gastronomia completa (menú saludable). Desayuno, Almuerzo, Merienda y Cena."]
 }, {
-    title: "Actividades y Eventos",
-    description: "Salones para actividades y eventos: Amanecer (120m2), Atardecer (260m2) y Buda (70m2). Espacios verdes para actividades al aire libre. Bosque de 8 hectáreas para caminatas y exploración."
+    title: "Salones para actividades",
+    description: ["Salón Amanecer 120 m2 / Salón Atardecer 280 m2."]
 }, {
-    title: "Recreación",
-    description: "Piscina exterior de 10x20 rodeada de bosque y sector de fogones. Áreas de descanso y relajación."
-}, {
-    title: "Otros Servicios",
-    description: "Servicio de hotelería para retiros, cursos y seminarios. Capacidad para eventos y reuniones."
+    title: "Otros espacios",
+    description: ["Piscina exterior e interior.", "Fogoneros.", "Espacios verdes."]
 }]
 export const GALERY = [img1, img2, img3, img4, img5, img6, img7, img8, img9]
 export const AMANECER = [am1, am2, am3, am4]

@@ -41,7 +41,12 @@ const Services = ({ bullet }) => {
                                         ? { height: contentEl.current.scrollHeight + 30 }
                                         : { height: "0px" }
                                 }>
-                                <p>{item.description}</p>
+                                <ul>
+                                    {item.description.map((list, i) => (
+                                        <li key={i}>{list}</li>
+                                    ))}
+
+                                </ul>
                             </div>
                         </div>
                     </Reveal>
