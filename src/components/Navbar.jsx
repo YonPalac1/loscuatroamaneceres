@@ -35,7 +35,7 @@ const Navbar = () => {
     return <nav>
         <button className='contact-button' onClick={() => handleBullet(5)}>{ bullet !== 0 ? "Contacto" : "Contactanos" }</button>
         <div className="nav-items">
-            {['home', 'galery', 'habitaciones', 'servicios', 'eventos', 'contacto'].map((seccion, index) => (
+            {['home', 'galery', 'habitaciones', 'encuentros', 'servicios', 'eventos', 'contacto'].map((seccion, index) => (
                 <button onClick={() => handleBullet(index)} key={index} id={`seccion-${index}`} className={`bullet ${index === bullet && "active"}`} data-tooltip={`${seccion}`}>
                     {index === bullet}
                 </button>
