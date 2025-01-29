@@ -3,7 +3,7 @@ import Form from './Form';
 import icon from "../assets/icon.png";
 
 const Contact = ({ bullet }) => {
-    return <section className='contact section-5'
+    return <section className='contact section-6'
         id="contacto"
         style={{
             display: bullet === 6 ? "flex" : "none"
