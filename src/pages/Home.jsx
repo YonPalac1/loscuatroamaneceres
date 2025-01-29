@@ -16,6 +16,7 @@ import Contact from '../components/Contact';
 import Container from '../components/Container';
 import ImageViewer from '../components/ImageViewer';
 import Loading from '../components/Loading';
+import Encuentros from '../components/Encuentros';
 
 const Home = () => {
     const [loading, setLoading] = useState(false);
@@ -25,12 +26,13 @@ const Home = () => {
         <Section1 bullet={bullet} setBullet={setBullet} />,
         <Galery bullet={bullet} setBullet={setBullet} setImageView={setImageView} setImageActive={setImageActive} />,
         <Rooms bullet={bullet} setBullet={setBullet} vid={vid} setVid={setVid} setImageView={setImageView} setImageActive={setImageActive} />,
+        <Encuentros bullet={bullet} setBullet={setBullet} vid={vid} setVid={setVid} setImageView={setImageView} setImageActive={setImageActive} />,
         <Services bullet={bullet} setBullet={setBullet} />,
         <Events bullet={bullet} setBullet={setBullet} />,
         <Contact bullet={bullet} setBullet={setBullet} />
     ];
 
-    const [images] = useState([vid1, vid2, vid3, vid4, vid5, vid6, vid7]);
+    const [images] = useState([vid1, vid2, vid2, vid3, vid4, vid5, vid6, vid7]);
     const heightRef = useRef(null);
 
     useEffect(() => {

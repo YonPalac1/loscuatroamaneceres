@@ -8,6 +8,24 @@ import img7 from "./src/assets/galery/img7.webp"
 import img8 from "./src/assets/galery/img8.webp"
 import img9 from "./src/assets/galery/img9.webp"
 
+import enc1 from "./src/assets/encuentros/enc1.jpeg"
+import enc2 from "./src/assets/encuentros/enc2.jpeg"
+import enc4 from "./src/assets/encuentros/enc4.jpeg"
+import enc3 from "./src/assets/encuentros/enc3.jpeg"
+import enc5 from "./src/assets/encuentros/enc5.jpeg"
+import enc6 from "./src/assets/encuentros/enc6.jpeg"
+import enc7 from "./src/assets/encuentros/enc7.jpeg"
+import enc8 from "./src/assets/encuentros/enc8.jpeg"
+import enc9 from "./src/assets/encuentros/enc9.jpeg"
+import enc10 from "./src/assets/encuentros/enc10.jpeg"
+import enc11 from "./src/assets/encuentros/enc11.jpeg"
+import enc12 from "./src/assets/encuentros/enc12.jpeg"
+import enc13 from "./src/assets/encuentros/enc13.jpeg"
+import enc14 from "./src/assets/encuentros/enc14.jpeg"
+import enc15 from "./src/assets/encuentros/enc15.jpeg"
+import enc16 from "./src/assets/encuentros/enc16.jpeg"
+import enc17 from "./src/assets/encuentros/enc17.jpeg"
+
 import am1 from "./src/assets/amanecer/am1.webp"
 import am2 from "./src/assets/amanecer/am2.webp"
 import am3 from "./src/assets/amanecer/am3.webp"
@@ -37,6 +55,7 @@ export const GALERY = [img1, img2, img3, img4, img5, img6, img7, img8, img9]
 export const AMANECER = [am1, am2, am3, am4]
 export const ATARDECER = [at1]
 export const BOSQUES = [bo1, bo2, bo3, bo4]
+export const ENCUENTROS = [enc1, enc2, enc3, enc4, enc5, enc6, enc7, enc8, enc9, enc10, enc11, enc12, enc13, enc14, enc15, enc16, enc17] 
 
 export const MONTHS = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
 export const CALENDAR = [

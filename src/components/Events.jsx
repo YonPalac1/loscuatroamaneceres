@@ -36,7 +36,7 @@ const Events = ({ bullet }) => {
     return <section className="events section-4"
         id="eventos"
         style={{
-            display: bullet === 4 ? "flex" : "none"
+            display: bullet === 5 ? "flex" : "none"
         }}
     >
         <div className="title">

@@ -18,7 +18,7 @@ const Services = ({ bullet }) => {
     return <section className='services section-3'
         id="servicios"
         style={{
-            display: bullet === 3 ? "flex" : "none"
+            display: bullet === 4 ? "flex" : "none"
         }}>
         <div className='title'>
             <Reveal delay={0.5}>

@@ -6,7 +6,7 @@ const Contact = ({ bullet }) => {
     return <section className='contact section-5'
         id="contacto"
         style={{
-            display: bullet === 5 ? "flex" : "none"
+            display: bullet === 6 ? "flex" : "none"
         }}>
         <div className='title'>
             <Reveal delay={0.5}>
