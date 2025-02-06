@@ -29,7 +29,7 @@ const Home = () => {
         <Encuentros bullet={bullet} setBullet={setBullet} vid={vid} setVid={setVid} setImageView={setImageView} setImageActive={setImageActive} n={3}/>,
         <Services bullet={bullet} setBullet={setBullet} n={4}/>,
         // <Events bullet={bullet} setBullet={setBullet} n={5} />,
-        <Contact bullet={bullet} setBullet={setBullet} n={6}/>
+        <Contact bullet={bullet} setBullet={setBullet} n={5}/>
     ];
 
     const [images] = useState([vid1, vid2, vid2, vid3, vid4, vid5, vid6, vid7]);
