@@ -11,7 +11,7 @@ import { ENCUENTROS } from "../../contants";
 import { Reveal } from "./Reveal";
 
 
-const Encuentros = ({ bullet, setVid, setImageView, setImageActive }) => {
+const Encuentros = ({ bullet, setVid, setImageView, setImageActive, n }) => {
     const [active, setActive] = useState("am")
 
     const handleImage = (img) => {
@@ -22,7 +22,7 @@ const Encuentros = ({ bullet, setVid, setImageView, setImageActive }) => {
     return <section className="rooms section-2"
         id="espacios"
         style={{
-            display: bullet === 3 ? "flex" : "none"
+            display: bullet === n ? "flex" : "none"
         }}
     >
         <div className="title">

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Reveal } from '../components/Reveal';
 import wave from '../assets/wave.png';
 
-const Section1 = ({ bullet, setBullet }) => {
+const Section1 = ({ bullet, setBullet, n }) => {
     const [paralaxPosition, setParalaxPosition] = useState({ x: 0, y: 0 });
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
@@ -28,7 +28,7 @@ const Section1 = ({ bullet, setBullet }) => {
     return <section className="home section-0"
         id="home"
         style={{
-            display: bullet === 0 ? "flex" : "none"
+            display: bullet === n ? "flex" : "none"
         }}>
         <div className="title">
             <Reveal delay={3.5}>

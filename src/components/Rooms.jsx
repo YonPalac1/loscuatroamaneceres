@@ -11,7 +11,7 @@ import { ATARDECER, AMANECER, BOSQUES } from "../../contants";
 import { Reveal } from "./Reveal";
 
 
-const Rooms = ({ bullet, setVid, setImageView, setImageActive }) => {
+const Rooms = ({ bullet, setVid, setImageView, setImageActive, n }) => {
     const [rooms, setRooms] = useState(AMANECER);
     const [active, setActive] = useState("am")
 
@@ -29,7 +29,7 @@ const Rooms = ({ bullet, setVid, setImageView, setImageActive }) => {
     return <section className="rooms section-2"
         id="espacios"
         style={{
-            display: bullet === 2 ? "flex" : "none"
+            display: bullet === n ? "flex" : "none"
         }}
     >
         <div className="title">

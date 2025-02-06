@@ -12,7 +12,7 @@ import 'swiper/css/scrollbar';
 import { Reveal } from "./Reveal";
 import { GALERY } from "../../contants";
 
-const Galery = ({ bullet, setImageView, setImageActive }) => {
+const Galery = ({ bullet, setImageView, setImageActive, n }) => {
     const [paralaxPosition, setParalaxPosition] = useState({ x: 0, y: 0 });
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
@@ -41,7 +41,7 @@ const Galery = ({ bullet, setImageView, setImageActive }) => {
     return <section className="galery section-1"
         id="espacios"
         style={{
-            display: bullet === 1 ? "flex" : "none"
+            display: bullet === n ? "flex" : "none"
         }}
     >
         <Swiper

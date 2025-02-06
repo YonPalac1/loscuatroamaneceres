@@ -2,11 +2,11 @@ import { Reveal } from './Reveal';
 import Form from './Form';
 import icon from "../assets/icon.png";
 
-const Contact = ({ bullet }) => {
+const Contact = ({ bullet, n }) => {
     return <section className='contact section-6'
         id="contacto"
         style={{
-            display: bullet === 6 ? "flex" : "none"
+            display: bullet === n ? "flex" : "none"
         }}>
         <div className='title'>
             <Reveal delay={0.5}>

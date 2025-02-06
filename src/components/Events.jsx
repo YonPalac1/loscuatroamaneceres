@@ -3,7 +3,7 @@ import { Reveal } from "./Reveal";
 import { CALENDAR, MONTHS } from "../../contants";
 import Grilla from "./Grilla";
 
-const Events = ({ bullet }) => {
+const Events = ({ bullet, n }) => {
     const [eventoBuscado, setEventoBuscado] = useState('');
     const [mesBuscado, setMesBuscado] = useState('');
     const [eventos, setEventos] = useState(CALENDAR);
@@ -36,7 +36,7 @@ const Events = ({ bullet }) => {
     return <section className="events section-4"
         id="eventos"
         style={{
-            display: bullet === 5 ? "flex" : "none"
+            display: bullet === n ? "flex" : "none"
         }}
     >
         <div className="title">

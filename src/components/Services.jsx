@@ -3,7 +3,7 @@ import { Reveal } from "./Reveal";
 import { SERVICES } from "../../contants";
 
 
-const Services = ({ bullet }) => {
+const Services = ({ bullet, n }) => {
     const contentEl = useRef();
     const [active, setActive] = useState(null);
 
@@ -18,7 +18,7 @@ const Services = ({ bullet }) => {
     return <section className='services section-3'
         id="servicios"
         style={{
-            display: bullet === 4 ? "flex" : "none"
+            display: bullet === n ? "flex" : "none"
         }}>
         <div className='title'>
             <Reveal delay={0.5}>
